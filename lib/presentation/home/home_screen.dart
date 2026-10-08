@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../domain/glucose/glucose_entry.dart';
 import '../../domain/glucose/glucose_providers.dart';
+import '../../domain/meal_plan/meal_plan_providers.dart';
 import '../../domain/nutri_guide/nutri_guide_providers.dart';
 import '../../domain/nutrition/nutrition_goals.dart';
 import '../../domain/nutrition/nutrition_providers.dart';
@@ -11,6 +12,7 @@ import '../../domain/profile/profile_providers.dart';
 import '../common/medical_disclaimer_banner.dart';
 import '../glucose/glucose_screen.dart';
 import '../inventory/inventory_screen.dart';
+import '../meal_plan/meal_plan_screen.dart';
 import '../menus/menus_screen.dart';
 import '../nutrition/daily_log_sections.dart';
 import '../nutri_guide/nutri_guide_screen.dart';
@@ -38,6 +40,7 @@ class HomeScreen extends ConsumerWidget {
     final goalsAsync = ref.watch(nutritionGoalsProvider);
     // La guía es parte del perfil personal: sin guía importada no hay acceso.
     final hasNutriGuide = ref.watch(nutriGuideProvider).value != null;
+    final hasMealPlan = ref.watch(mealPlanProvider).value != null;
     final today = _todayOnly();
 
     return Scaffold(
@@ -159,6 +162,14 @@ class HomeScreen extends ConsumerWidget {
                     ),
                   ),
                 ),
+                if (hasMealPlan)
+                  _QuickAccessTile(
+                    icon: Icons.restaurant_menu_outlined,
+                    label: 'Mi plan',
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => const MealPlanScreen()),
+                    ),
+                  ),
                 if (hasNutriGuide)
                   _QuickAccessTile(
                     icon: Icons.fact_check_outlined,

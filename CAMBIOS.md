@@ -3,6 +3,15 @@
 Cada sección se publica como notas de la versión y la app la muestra al
 avisar que hay una actualización.
 
+## 1.2.0
+
+- "Mi plan de comidas": si tu archivo de perfil trae el plan de tu
+  nutricionista, ves cada comida con su hora, porciones, aporte y ejemplos,
+  más la suplementación y las recomendaciones para días de deporte. Se abre
+  desde Inicio ("Mi plan") o desde Perfil.
+- En el Diario, cada comida muestra lo registrado contra la meta del plan
+  (ej. "572 / 515 kcal") y las porciones que le tocan.
+
 ## 1.1.0
 
 - La app avisa en Inicio cuando hay una versión nueva, y en Configuración

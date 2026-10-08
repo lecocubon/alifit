@@ -7,6 +7,36 @@
     "proteinas": 120,
     "grasas": 74
   },
+  "planComidas": {
+    "titulo": "Plan de ejemplo",
+    "fecha": "2026-10-08",
+    "objetivo": "Comer ordenado.",
+    "control": "2026-11-10",
+    "comidas": [
+      {
+        "tipo": "desayuno",
+        "hora": "8:00",
+        "aporte": {"calories": 500, "protein": 30, "carbs": 50, "fat": 20},
+        "porciones": [
+          {"grupo": "Cereales", "cantidad": 1, "equivale": "avena 1/2 taza"},
+          {"grupo": "Proteína", "cantidad": 2, "equivale": "huevo 1 unidad"},
+          {"grupo": "Lípidos", "cantidad": 0.5}
+        ],
+        "ejemplos": ["Avena con leche y 2 huevos.", "Pan con huevo."],
+        "comentarios": ["Cocinar sin aceite."]
+      },
+      {
+        "tipo": "colacion",
+        "hora": "12:00",
+        "aporte": {"calories": 65, "protein": 1, "carbs": 15, "fat": 0},
+        "porciones": [{"grupo": "Frutas", "cantidad": 1}]
+      }
+    ],
+    "suplementacion": ["Tomar agua."],
+    "deporte": [
+      {"titulo": "Día de gimnasio", "indicaciones": ["Llevar una fruta."]}
+    ]
+  },
   "guiaNutri": {
     "title": "Guía de ejemplo",
     "source": "Datos inventados para los tests",

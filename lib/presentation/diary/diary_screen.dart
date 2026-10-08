@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
+import '../../core/text/decimal_format.dart';
+import '../../domain/meal_plan/meal_plan_providers.dart';
 import '../../domain/nutrition/meal.dart';
 import '../../domain/nutrition/meal_type.dart';
 import '../../domain/nutrition/nutrition_goals.dart';
@@ -9,18 +11,10 @@ import '../../domain/nutrition/nutrition_providers.dart';
 import '../../domain/nutrition/nutrition_values.dart';
 import '../../domain/recipes/recipe_providers.dart';
 import '../../domain/recipes/recipe_repository.dart';
+import '../common/meal_type_icon.dart';
 import '../nutrition/daily_log_sections.dart';
 import '../nutrition/food_search_screen.dart';
 import '../nutrition/nutrition_summary_card.dart';
-
-IconData _iconForMealType(MealType type) => switch (type) {
-  MealType.desayuno => Icons.free_breakfast_outlined,
-  MealType.colacion => Icons.cookie_outlined,
-  MealType.almuerzo => Icons.lunch_dining_outlined,
-  MealType.once => Icons.emoji_food_beverage_outlined,
-  MealType.cena => Icons.dinner_dining_outlined,
-  MealType.personalizada => Icons.restaurant_outlined,
-};
 
 Meal? _mealForType(List<Meal> meals, MealType type) {
   for (final meal in meals) {
@@ -269,6 +263,11 @@ class _MealBox extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final items = meal?.items ?? const [];
     final totals = meal?.totals ?? NutritionValues.zero;
+    final planned = ref.watch(mealPlanProvider).value?.mealFor(type);
+    final targetKcal = planned?.target?.calories;
+    final hintStyle = Theme.of(context).textTheme.bodySmall?.copyWith(
+      color: Theme.of(context).colorScheme.onSurfaceVariant,
+    );
 
     return Card(
       margin: EdgeInsets.zero,
@@ -279,7 +278,7 @@ class _MealBox extends ConsumerWidget {
           children: [
             Row(
               children: [
-                Icon(_iconForMealType(type), size: 20),
+                Icon(mealTypeIcon(type), size: 20),
                 const SizedBox(width: 8),
                 Expanded(
                   child: Text(
@@ -287,8 +286,18 @@ class _MealBox extends ConsumerWidget {
                     style: Theme.of(context).textTheme.titleMedium,
                   ),
                 ),
+                if (items.isEmpty && targetKcal != null)
+                  Text(
+                    'Meta ${formatDecimalEs(targetKcal)} kcal',
+                    style: hintStyle,
+                  ),
                 if (items.isNotEmpty) ...[
-                  Text('${totals.calories.round()} kcal'),
+                  Text(
+                    targetKcal == null
+                        ? '${totals.calories.round()} kcal'
+                        : '${totals.calories.round()} / '
+                              '${formatDecimalEs(targetKcal)} kcal',
+                  ),
                   PopupMenuButton<String>(
                     onSelected: (value) {
                       switch (value) {
@@ -318,6 +327,17 @@ class _MealBox extends ConsumerWidget {
                 ],
               ],
             ),
+            // Lo que el plan del nutri pone en esta comida, como guía al
+            // registrar.
+            if (planned != null && planned.portions.isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.only(left: 28, top: 2),
+                child: Text(
+                  'Plan${planned.time == null ? '' : ' ${planned.time}'}: '
+                  '${planned.portionsSummary}',
+                  style: hintStyle,
+                ),
+              ),
             if (items.isNotEmpty) ...[
               const Divider(height: 12),
               ...items.map(

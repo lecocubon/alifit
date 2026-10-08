@@ -1,21 +1,26 @@
 import 'package:file_selector/file_selector.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:intl/intl.dart';
 
 import '../../core/text/decimal_format.dart';
+import '../../domain/meal_plan/meal_plan_providers.dart';
 import '../../domain/nutri_guide/nutri_guide_providers.dart';
 import '../../domain/nutrition/nutrition_providers.dart';
 import '../../domain/personal_plan/personal_plan.dart';
+import '../meal_plan/meal_plan_screen.dart';
 import '../nutri_guide/nutri_guide_screen.dart';
 
-/// "Mi plan del nutri" en Perfil: importa el archivo personal con las metas
-/// y la guía de porciones, que no vienen dentro de la app.
+/// "Mi plan del nutri" en Perfil: importa el archivo personal con las metas,
+/// el plan de comidas y la guía de porciones, que no vienen dentro de la app.
 class PersonalPlanSection extends ConsumerWidget {
   const PersonalPlanSection({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final mealPlan = ref.watch(mealPlanProvider).value;
     final guide = ref.watch(nutriGuideProvider).value;
+    final hasSomething = mealPlan != null || guide != null;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,9 +32,24 @@ class PersonalPlanSection extends ConsumerWidget {
         const SizedBox(height: 4),
         const Text(
           'Si tienes un archivo de perfil de AliFit (.json) con el plan de '
-          'tu nutricionista, impórtalo aquí: carga tus metas y su guía de '
-          'porciones. Queda guardado solo en este teléfono.',
+          'tu nutricionista, impórtalo aquí: carga tus metas, el plan de '
+          'comidas y su guía de porciones. Queda guardado solo en este '
+          'teléfono.',
         ),
+        if (mealPlan != null)
+          ListTile(
+            contentPadding: EdgeInsets.zero,
+            leading: const Icon(Icons.restaurant_menu_outlined),
+            title: const Text('Plan de comidas'),
+            subtitle: Text(
+              '${mealPlan.meals.length} comidas'
+              '${mealPlan.controlDate == null ? '' : ' · control el ${DateFormat('d MMM', 'es').format(mealPlan.controlDate!)}'}',
+            ),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (_) => const MealPlanScreen())),
+          ),
         if (guide != null)
           ListTile(
             contentPadding: EdgeInsets.zero,
@@ -40,22 +60,21 @@ class PersonalPlanSection extends ConsumerWidget {
             onTap: () => Navigator.of(
               context,
             ).push(MaterialPageRoute(builder: (_) => const NutriGuideScreen())),
-          )
-        else
-          const SizedBox(height: 8),
+          ),
+        if (!hasSomething) const SizedBox(height: 8),
         Wrap(
           spacing: 8,
           children: [
             FilledButton.tonalIcon(
               icon: const Icon(Icons.file_open_outlined),
-              label: Text(guide == null ? 'Importar mi perfil' : 'Reemplazar'),
+              label: Text(hasSomething ? 'Reemplazar' : 'Importar mi perfil'),
               onPressed: () => _import(context, ref),
             ),
-            if (guide != null)
+            if (hasSomething)
               TextButton.icon(
                 icon: const Icon(Icons.delete_outline),
-                label: const Text('Quitar guía'),
-                onPressed: () => _removeGuide(context, ref),
+                label: const Text('Quitar plan y guía'),
+                onPressed: () => _remove(context, ref),
               ),
           ],
         ),
@@ -81,6 +100,20 @@ class PersonalPlanSection extends ConsumerWidget {
       return;
     }
 
+    final lines = [
+      if (plan.goals case final goals?)
+        'Metas diarias: ${formatDecimalEs(goals.calories)} kcal · '
+            'P ${formatDecimalEs(goals.protein)} g · '
+            'C ${formatDecimalEs(goals.carbs)} g · '
+            'G ${formatDecimalEs(goals.fat)} g. Reemplazan tus metas '
+            'actuales.',
+      if (plan.mealPlan case final mealPlan?)
+        'Plan de comidas: '
+            '${mealPlan.meals.map((m) => m.type.label).join(', ')}.',
+      if (plan.guide case final guide?)
+        'Guía del nutri: ${guide.groups.length} grupos, '
+            '${guide.foodCount} alimentos.',
+    ];
     final confirmed = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
@@ -89,21 +122,10 @@ class PersonalPlanSection extends ConsumerWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            if (plan.goals case final goals?)
-              Text(
-                'Metas diarias: ${formatDecimalEs(goals.calories)} kcal · '
-                'P ${formatDecimalEs(goals.protein)} g · '
-                'C ${formatDecimalEs(goals.carbs)} g · '
-                'G ${formatDecimalEs(goals.fat)} g. Reemplazan tus metas '
-                'actuales.',
-              ),
-            if (plan.goals != null && plan.guide != null)
-              const SizedBox(height: 8),
-            if (plan.guide case final guide?)
-              Text(
-                'Guía del nutri: ${guide.groups.length} grupos, '
-                '${guide.foodCount} alimentos.',
-              ),
+            for (final (i, line) in lines.indexed) ...[
+              if (i > 0) const SizedBox(height: 8),
+              Text(line),
+            ],
           ],
         ),
         actions: [
@@ -124,19 +146,20 @@ class PersonalPlanSection extends ConsumerWidget {
 
     await plan.apply(
       goalsRepository: ref.read(nutritionGoalsRepositoryProvider),
+      mealPlanRepository: ref.read(mealPlanRepositoryProvider),
       guideRepository: ref.read(nutriGuideRepositoryProvider),
     );
     messenger.showSnackBar(const SnackBar(content: Text('Perfil importado.')));
   }
 
-  Future<void> _removeGuide(BuildContext context, WidgetRef ref) async {
+  Future<void> _remove(BuildContext context, WidgetRef ref) async {
     final confirmed = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('¿Quitar la guía del nutri?'),
+        title: const Text('¿Quitar el plan y la guía del nutri?'),
         content: const Text(
-          'Se borra de este teléfono. Tus metas y tus registros no cambian. '
-          'Puedes volver a importarla con tu archivo de perfil.',
+          'Se borran de este teléfono. Tus metas y tus registros no cambian. '
+          'Puedes volver a importarlos con tu archivo de perfil.',
         ),
         actions: [
           TextButton(
@@ -151,6 +174,7 @@ class PersonalPlanSection extends ConsumerWidget {
       ),
     );
     if (confirmed == true) {
+      await ref.read(mealPlanRepositoryProvider).clearPlan();
       await ref.read(nutriGuideRepositoryProvider).clearGuide();
     }
   }
