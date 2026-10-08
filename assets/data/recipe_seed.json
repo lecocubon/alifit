@@ -1,0 +1,3426 @@
+{
+  "seedVersion": "2026-07-23.7",
+  "attribution": "Recetario propio de AliFit: preparaciones tradicionales/genéricas escritas para la app (no copiadas de ningún libro, sitio o canal específico). Los condimentos de uso libre en cantidades pequeñas (sal, pimienta, hierbas secas, ajo en polvo) se mencionan en las instrucciones pero no se cuentan como ingrediente nutricional. El aceite de oliva y el limón sí se cuentan como ingrediente en las recetas donde son un componente central de la preparación.",
+  "recipes": [
+    {
+      "name": "Cazuela de Vacuno",
+      "servings": 4,
+      "prepMinutes": 75,
+      "tags": [
+        "chilena",
+        "casera",
+        "sopa"
+      ],
+      "instructions": "Cuece la carne en agua con sal durante 30 minutos hasta que esté tierna. Agrega la cebolla picada, la zanahoria en trozos y el zapallo, y cocina 15 minutos más.\n\nSuma la papa y el choclo y cocina otros 20 minutos hasta que las papas estén blandas. Ajusta sal y pimienta antes de servir.",
+      "ingredients": [
+        {
+          "food": "Carne de Vacuno, Malaya, Sin Hueso, Calidad Choice, Cruda",
+          "grams": 500
+        },
+        {
+          "food": "Papa Gold, Sin Cáscara, Cruda",
+          "grams": 400
+        },
+        {
+          "food": "Zapallo Butternut (Zapallo Camote), Crudo",
+          "grams": 250
+        },
+        {
+          "food": "Choclo Dulce, Granos Amarillos y Blancos, Fresco, Crudo",
+          "grams": 200
+        },
+        {
+          "food": "Zanahoria Madura, Cruda",
+          "grams": 120
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 100
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Cazuela de Pollo",
+      "servings": 4,
+      "prepMinutes": 60,
+      "tags": [
+        "chilena",
+        "casera",
+        "sopa"
+      ],
+      "instructions": "Cuece los trozos de pollo en agua con sal durante 20 minutos. Agrega cebolla, zanahoria y zapallo, y cocina 15 minutos.\n\nSuma la papa y el choclo y cocina hasta que las papas estén tiernas, unos 20 minutos más. Sirve caliente.",
+      "ingredients": [
+        {
+          "food": "Trutro Entero de Pollo, Sin Hueso, Sin Piel, Crudo",
+          "grams": 500
+        },
+        {
+          "food": "Papa Roja, Sin Cáscara, Cruda",
+          "grams": 400
+        },
+        {
+          "food": "Zapallo Butternut (Zapallo Camote), Crudo",
+          "grams": 200
+        },
+        {
+          "food": "Choclo Dulce, Granos Amarillos y Blancos, Fresco, Crudo",
+          "grams": 150
+        },
+        {
+          "food": "Zanahoria Madura, Cruda",
+          "grams": 100
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 80
+        }
+      ],
+      "otherIngredients": [
+        "Sal, a gusto"
+      ]
+    },
+    {
+      "name": "Pastel de Choclo",
+      "servings": 6,
+      "prepMinutes": 90,
+      "tags": [
+        "chilena",
+        "casera"
+      ],
+      "instructions": "Sofríe la cebolla picada hasta que esté transparente y mézclala con la carne molida cocida (el 'pino'); condimenta a gusto y agrega un par de aceitunas por porción al fondo de cada pocillo o fuente. Cubre con huevo duro en rodajas.\n\nPara la capa de choclo, licúa los granos de choclo con la leche y cocina revolviendo hasta espesar; vierte sobre el pino. Hornea a 200°C durante 30-35 minutos hasta dorar la superficie.",
+      "ingredients": [
+        {
+          "food": "Carne de Vacuno Molida, 80% Magra / 20% Grasa, Cruda",
+          "grams": 400
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 200
+        },
+        {
+          "food": "Choclo Dulce, Granos Amarillos y Blancos, Fresco, Crudo",
+          "grams": 600
+        },
+        {
+          "food": "Leche Entera, 3,25% Grasa, con Vitamina D Agregada",
+          "grams": 150
+        },
+        {
+          "food": "Huevo Grado A, Grande, Entero",
+          "grams": 100
+        },
+        {
+          "food": "Aceitunas Verdes, Manzanilla, Rellenas con Pimiento",
+          "grams": 40
+        }
+      ]
+    },
+    {
+      "name": "Porotos Granados",
+      "servings": 4,
+      "prepMinutes": 50,
+      "tags": [
+        "chilena",
+        "casera",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Sofríe la cebolla picada hasta que esté blanda. Agrega los porotos verdes en trozos, el zapallo en cubos y el choclo desgranado, y cubre con agua o caldo de verduras.\n\nCocina a fuego medio 30-35 minutos hasta que las verduras estén tiernas y el caldo haya espesado un poco. Ajusta sal antes de servir.",
+      "ingredients": [
+        {
+          "food": "Porotos Verdes (Ejotes), Crudos",
+          "grams": 300
+        },
+        {
+          "food": "Zapallo Butternut (Zapallo Camote), Crudo",
+          "grams": 300
+        },
+        {
+          "food": "Choclo Dulce, Granos Amarillos y Blancos, Fresco, Crudo",
+          "grams": 300
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 100
+        },
+        {
+          "food": "Zanahoria Madura, Cruda",
+          "grams": 80
+        }
+      ],
+      "otherIngredients": [
+        "Sal, a gusto"
+      ]
+    },
+    {
+      "name": "Lentejas Guisadas",
+      "servings": 4,
+      "prepMinutes": 45,
+      "tags": [
+        "chilena",
+        "casera",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Sofríe la cebolla y la zanahoria picadas hasta que estén blandas. Agrega las lentejas (previamente remojadas o directamente si son de cocción rápida) y cubre con agua.\n\nCocina a fuego medio 25-30 minutos hasta que las lentejas estén tiernas y el guiso haya espesado. Ajusta sal y sirve.",
+      "ingredients": [
+        {
+          "food": "Lentejas, Secas",
+          "grams": 300
+        },
+        {
+          "food": "Zanahoria Madura, Cruda",
+          "grams": 120
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 100
+        },
+        {
+          "food": "Zapallo Butternut (Zapallo Camote), Crudo",
+          "grams": 150
+        }
+      ],
+      "otherIngredients": [
+        "Sal, a gusto"
+      ]
+    },
+    {
+      "name": "Charquicán",
+      "servings": 4,
+      "prepMinutes": 55,
+      "tags": [
+        "chilena",
+        "casera"
+      ],
+      "instructions": "Sofríe la cebolla con la carne molida hasta dorar. Agrega la papa y el zapallo en cubos junto con un poco de agua, y cocina tapado hasta que las verduras estén blandas, unos 25 minutos.\n\nMachaca parcialmente con un tenedor o pisapapas para lograr una textura semipuré. Agrega el choclo al final y calienta 5 minutos más. Sirve con huevo frito encima si quieres.",
+      "ingredients": [
+        {
+          "food": "Carne de Vacuno Molida, 90% Magra / 10% Grasa, Cruda",
+          "grams": 300
+        },
+        {
+          "food": "Papa Russet, Sin Cáscara, Cruda",
+          "grams": 400
+        },
+        {
+          "food": "Zapallo Butternut (Zapallo Camote), Crudo",
+          "grams": 250
+        },
+        {
+          "food": "Choclo Dulce, Granos Amarillos y Blancos, Fresco, Crudo",
+          "grams": 150
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 100
+        }
+      ]
+    },
+    {
+      "name": "Ensalada Chilena",
+      "servings": 4,
+      "prepMinutes": 10,
+      "tags": [
+        "chilena",
+        "casera",
+        "saludable",
+        "rapida",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Corta el tomate en cubos y la cebolla en pluma fina. Mezcla, agrega sal a gusto y deja reposar 5 minutos antes de servir para que se suavice el sabor de la cebolla.",
+      "ingredients": [
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 400
+        },
+        {
+          "food": "Cebolla Morada, Cruda",
+          "grams": 100
+        }
+      ],
+      "otherIngredients": [
+        "Sal, a gusto"
+      ]
+    },
+    {
+      "name": "Ensalada de Palta y Tomate",
+      "servings": 2,
+      "prepMinutes": 10,
+      "tags": [
+        "chilena",
+        "saludable",
+        "rapida",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Corta la palta y el tomate en cubos, mezcla suavemente y condimenta con sal y jugo de limón a gusto.",
+      "ingredients": [
+        {
+          "food": "Palta Hass, Pelada, Cruda",
+          "grams": 200
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 200
+        }
+      ],
+      "otherIngredients": [
+        "Sal, a gusto"
+      ]
+    },
+    {
+      "name": "Pollo Arvejado",
+      "servings": 4,
+      "prepMinutes": 40,
+      "tags": [
+        "chilena",
+        "casera"
+      ],
+      "instructions": "Sofríe la cebolla y el pollo en trozos hasta dorar. Agrega la zanahoria en cubos y cocina 10 minutos.\n\nSuma las arvejas y un poco de agua o caldo, y cocina 10-15 minutos más hasta que el pollo esté cocido y la salsa haya espesado.",
+      "ingredients": [
+        {
+          "food": "Pechuga de Pollo, Sin Hueso, Sin Piel, Cruda",
+          "grams": 500
+        },
+        {
+          "food": "Arvejas Verdes Dulces, en Conserva, con Sodio y Azúcar Agregados, Escurridas y Enjuagadas",
+          "grams": 250
+        },
+        {
+          "food": "Zanahoria Madura, Cruda",
+          "grams": 100
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 80
+        }
+      ]
+    },
+    {
+      "name": "Guiso de Garbanzos con Longaniza",
+      "servings": 4,
+      "prepMinutes": 45,
+      "tags": [
+        "chilena",
+        "casera"
+      ],
+      "instructions": "Sofríe la cebolla y la longaniza en trozos hasta dorar. Agrega la zanahoria y el zapallo en cubos, cubre con agua o caldo y cocina 15 minutos.\n\nSuma los garbanzos y cocina 10 minutos más hasta que todo esté caliente e integrado.",
+      "ingredients": [
+        {
+          "food": "Garbanzos, en Conserva, con Sodio Agregado, Escurridos y Enjuagados",
+          "grams": 400
+        },
+        {
+          "food": "Longaniza Italiana de Cerdo, Suave, Cocida, Frita en Sartén",
+          "grams": 200
+        },
+        {
+          "food": "Zapallo Butternut (Zapallo Camote), Crudo",
+          "grams": 150
+        },
+        {
+          "food": "Zanahoria Madura, Cruda",
+          "grams": 100
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 80
+        }
+      ]
+    },
+    {
+      "name": "Arroz con Pollo",
+      "servings": 4,
+      "prepMinutes": 40,
+      "tags": [
+        "chilena",
+        "casera"
+      ],
+      "instructions": "Sofríe la cebolla y el pimentón picados con el pollo en trozos hasta dorar. Agrega el arroz y revuelve un par de minutos.\n\nSuma agua o caldo (el doble de volumen que el arroz), las arvejas y la zanahoria, y cocina tapado a fuego bajo 18-20 minutos hasta que el arroz esté cocido.",
+      "ingredients": [
+        {
+          "food": "Pechuga de Pollo, Sin Hueso, Sin Piel, Cruda",
+          "grams": 400
+        },
+        {
+          "food": "Arroz Blanco, Grano Largo, No Enriquecido, Crudo",
+          "grams": 300
+        },
+        {
+          "food": "Pimentón Rojo, Crudo",
+          "grams": 100
+        },
+        {
+          "food": "Zanahoria Madura, Cruda",
+          "grams": 80
+        },
+        {
+          "food": "Arvejas Verdes Dulces, en Conserva, con Sodio y Azúcar Agregados, Escurridas y Enjuagadas",
+          "grams": 100
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 80
+        }
+      ]
+    },
+    {
+      "name": "Bistec con Papas y Huevo",
+      "servings": 2,
+      "prepMinutes": 30,
+      "tags": [
+        "chilena",
+        "casera",
+        "rapida"
+      ],
+      "instructions": "Cuece o fríe las papas cortadas en láminas hasta dorar. Sofríe la cebolla en pluma aparte.\n\nCocina el bistec a la plancha a gusto de cocción y fríe el huevo. Sirve el bistec sobre las papas, con la cebolla y el huevo encima.",
+      "ingredients": [
+        {
+          "food": "Carne de Vacuno, Posta Rosada (Top Round), Sin Hueso, Calidad Choice, Cruda",
+          "grams": 300
+        },
+        {
+          "food": "Papa Gold, Sin Cáscara, Cruda",
+          "grams": 400
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 100
+        },
+        {
+          "food": "Huevo Grado A, Grande, Entero",
+          "grams": 100
+        }
+      ]
+    },
+    {
+      "name": "Pan con Palta y Huevo",
+      "servings": 1,
+      "prepMinutes": 10,
+      "tags": [
+        "chilena",
+        "saludable",
+        "rapida",
+        "desayuno"
+      ],
+      "instructions": "Machaca la palta con un tenedor y agrega sal a gusto. Unta sobre el pan tostado y agrega el huevo cocido o frito encima.",
+      "ingredients": [
+        {
+          "food": "Pan Integral, Comercial",
+          "grams": 70
+        },
+        {
+          "food": "Palta Hass, Pelada, Cruda",
+          "grams": 80
+        },
+        {
+          "food": "Huevo Grado A, Grande, Entero",
+          "grams": 50
+        }
+      ],
+      "otherIngredients": [
+        "Sal, a gusto"
+      ]
+    },
+    {
+      "name": "Vienesas con Puré",
+      "servings": 4,
+      "prepMinutes": 30,
+      "tags": [
+        "chilena",
+        "casera",
+        "rapida"
+      ],
+      "instructions": "Cuece las papas hasta que estén blandas y hazlas puré con la leche caliente. Cocina las vienesas en agua caliente unos 5 minutos y sirve sobre el puré.",
+      "ingredients": [
+        {
+          "food": "Vienesa de Vacuno, Sin Calentar",
+          "grams": 320
+        },
+        {
+          "food": "Papa Russet, Sin Cáscara, Cruda",
+          "grams": 500
+        },
+        {
+          "food": "Leche Entera, 3,25% Grasa, con Vitamina D Agregada",
+          "grams": 150
+        }
+      ]
+    },
+    {
+      "name": "Chupe de Camarones",
+      "servings": 4,
+      "prepMinutes": 45,
+      "tags": [
+        "chilena",
+        "casera"
+      ],
+      "instructions": "Sofríe la cebolla picada hasta transparentar. Agrega el pan remojado en leche y deshecho, revolviendo hasta formar una base cremosa.\n\nSuma los camarones y cocina 5-8 minutos hasta que estén rosados. Incorpora el queso y revuelve hasta que se derrita. Hornea gratinado 10 minutos si quieres una costra dorada.",
+      "ingredients": [
+        {
+          "food": "Camarón, de Cultivo, Crudo",
+          "grams": 400
+        },
+        {
+          "food": "Pan Blanco, Comercial",
+          "grams": 100
+        },
+        {
+          "food": "Leche Entera, 3,25% Grasa, con Vitamina D Agregada",
+          "grams": 250
+        },
+        {
+          "food": "Queso Mozzarella, Baja Humedad, Semidescremado",
+          "grams": 100
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 80
+        }
+      ]
+    },
+    {
+      "name": "Guiso de Atún con Arroz",
+      "servings": 3,
+      "prepMinutes": 25,
+      "tags": [
+        "chilena",
+        "casera",
+        "rapida"
+      ],
+      "instructions": "Cuece el arroz aparte según las instrucciones habituales. Sofríe la cebolla y el tomate picados, agrega el atún escurrido y desmenúzalo, y cocina 5 minutos. Sirve el atún sobre el arroz.",
+      "ingredients": [
+        {
+          "food": "Atún Claro, en Conserva al Agua, Escurrido",
+          "grams": 300
+        },
+        {
+          "food": "Arroz Blanco, Grano Largo, No Enriquecido, Crudo",
+          "grams": 250
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 150
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 80
+        }
+      ]
+    },
+    {
+      "name": "Ensalada de Betarraga con Huevo",
+      "servings": 2,
+      "prepMinutes": 30,
+      "tags": [
+        "chilena",
+        "saludable",
+        "vegetariana"
+      ],
+      "instructions": "Cuece la betarraga entera con piel hasta que esté blanda (unos 25 minutos), pélala y córtala en cubos o láminas. Cuece el huevo duro y córtalo en gajos. Mezcla con la cebolla en pluma y condimenta a gusto.",
+      "ingredients": [
+        {
+          "food": "Betarraga, Cruda",
+          "grams": 300
+        },
+        {
+          "food": "Huevo Grado A, Grande, Entero",
+          "grams": 100
+        },
+        {
+          "food": "Cebolla Morada, Cruda",
+          "grams": 50
+        }
+      ]
+    },
+    {
+      "name": "Pechuga de Pollo a la Plancha con Ensalada Verde",
+      "servings": 2,
+      "prepMinutes": 20,
+      "tags": [
+        "saludable",
+        "rapida"
+      ],
+      "instructions": "Cocina la pechuga a la plancha con sal y pimienta hasta que esté dorada por fuera y cocida por dentro, unos 6-7 minutos por lado según el grosor. Sirve con la lechuga, el tomate y el pepino en ensalada, aliñados a gusto.",
+      "ingredients": [
+        {
+          "food": "Pechuga de Pollo, Sin Hueso, Sin Piel, Cruda",
+          "grams": 350
+        },
+        {
+          "food": "Lechuga de Hoja Verde, Cruda",
+          "grams": 150
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 150
+        },
+        {
+          "food": "Pepino, con Cáscara, Crudo",
+          "grams": 100
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Bowl de Arroz Integral con Pollo y Verduras",
+      "servings": 2,
+      "prepMinutes": 30,
+      "tags": [
+        "saludable",
+        "rapida"
+      ],
+      "instructions": "Cuece el arroz integral según las instrucciones habituales. Saltea el pollo en trozos con el pimentón y el brócoli hasta que el pollo esté cocido y las verduras al dente. Sirve todo junto en un bowl.",
+      "ingredients": [
+        {
+          "food": "Arroz Integral, Grano Largo, No Enriquecido, Crudo",
+          "grams": 180
+        },
+        {
+          "food": "Pechuga de Pollo, Sin Hueso, Sin Piel, Cruda",
+          "grams": 300
+        },
+        {
+          "food": "Brócoli, Crudo",
+          "grams": 200
+        },
+        {
+          "food": "Pimentón Rojo, Crudo",
+          "grams": 100
+        },
+        {
+          "food": "Zanahoria Madura, Cruda",
+          "grams": 80
+        }
+      ]
+    },
+    {
+      "name": "Salmón al Horno con Zapallo Italiano",
+      "servings": 2,
+      "prepMinutes": 30,
+      "tags": [
+        "saludable",
+        "rapida"
+      ],
+      "instructions": "Condimenta el salmón con sal, pimienta y jugo de limón. Corta el zapallo italiano en láminas.\n\nHornea todo junto a 200°C por 15-18 minutos hasta que el salmón esté cocido.",
+      "ingredients": [
+        {
+          "food": "Salmón del Atlántico, de Cultivo, Crudo",
+          "grams": 350
+        },
+        {
+          "food": "Zapallo Italiano (Zucchini) Verde, con Cáscara, Crudo",
+          "grams": 250
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Ensalada de Garbanzos con Verduras",
+      "servings": 3,
+      "prepMinutes": 15,
+      "tags": [
+        "saludable",
+        "rapida",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Mezcla los garbanzos escurridos con el tomate, el pepino y la cebolla morada en cubos pequeños. Condimenta con sal, pimienta y un chorrito de aceite de oliva a gusto.",
+      "ingredients": [
+        {
+          "food": "Garbanzos, en Conserva, con Sodio Agregado, Escurridos y Enjuagados",
+          "grams": 350
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 150
+        },
+        {
+          "food": "Pepino, con Cáscara, Crudo",
+          "grams": 100
+        },
+        {
+          "food": "Cebolla Morada, Cruda",
+          "grams": 50
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Tazón de Yogur con Avena y Frutillas",
+      "servings": 1,
+      "prepMinutes": 5,
+      "tags": [
+        "saludable",
+        "rapida",
+        "desayuno",
+        "vegetariana"
+      ],
+      "instructions": "Mezcla el yogur con la avena y deja reposar 5 minutos para que la avena se hidrate un poco. Agrega las frutillas picadas encima.",
+      "ingredients": [
+        {
+          "food": "Yogur Griego, Natural, Leche Entera",
+          "grams": 200
+        },
+        {
+          "food": "Avena en Copos, Grano Entero, Tradicional",
+          "grams": 40
+        },
+        {
+          "food": "Frutillas, Crudas",
+          "grams": 100
+        }
+      ]
+    },
+    {
+      "name": "Omelette de Verduras",
+      "servings": 1,
+      "prepMinutes": 15,
+      "tags": [
+        "saludable",
+        "rapida",
+        "desayuno",
+        "vegetariana"
+      ],
+      "instructions": "Bate los huevos con sal y pimienta. Saltea los champiñones, la espinaca y el pimentón hasta que estén blandos.\n\nVierte los huevos sobre las verduras en un sartén caliente y cocina a fuego medio hasta cuajar. Agrega el queso, dobla el omelette y sirve.",
+      "ingredients": [
+        {
+          "food": "Huevo Grado A, Grande, Entero",
+          "grams": 150
+        },
+        {
+          "food": "Champiñones Blancos",
+          "grams": 80
+        },
+        {
+          "food": "Espinaca Baby",
+          "grams": 50
+        },
+        {
+          "food": "Pimentón Verde, Crudo",
+          "grams": 50
+        },
+        {
+          "food": "Queso Fresco, Sólido",
+          "grams": 40
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Pollo al Horno con Camote y Brócoli",
+      "servings": 3,
+      "prepMinutes": 40,
+      "tags": [
+        "saludable"
+      ],
+      "instructions": "Corta el camote en cubos y condiméntalo con sal y pimienta. Hornea el pollo y el camote juntos a 200°C durante 25 minutos.\n\nAgrega el brócoli y hornea 10-12 minutos más hasta que todo esté cocido.",
+      "ingredients": [
+        {
+          "food": "Trutro Entero de Pollo, Sin Hueso, Sin Piel, Crudo",
+          "grams": 500
+        },
+        {
+          "food": "Camote (Batata), Pulpa Naranja, Sin Cáscara, Crudo",
+          "grams": 350
+        },
+        {
+          "food": "Brócoli, Crudo",
+          "grams": 200
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Ensalada de Atún con Porotos Blancos",
+      "servings": 2,
+      "prepMinutes": 10,
+      "tags": [
+        "saludable",
+        "rapida"
+      ],
+      "instructions": "Mezcla el atún escurrido y desmenuzado con los porotos, el tomate y la cebolla morada en cubos. Condimenta con sal, pimienta y aceite de oliva a gusto.",
+      "ingredients": [
+        {
+          "food": "Atún Claro, en Conserva al Agua, Escurrido",
+          "grams": 200
+        },
+        {
+          "food": "Porotos Cannellini en Conserva, con Sodio Agregado, Escurridos y Enjuagados",
+          "grams": 250
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 100
+        },
+        {
+          "food": "Cebolla Morada, Cruda",
+          "grams": 50
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Lentejas con Verduras Salteadas",
+      "servings": 3,
+      "prepMinutes": 35,
+      "tags": [
+        "saludable",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Cuece las lentejas hasta que estén tiernas. Aparte, saltea el zapallo italiano, la zanahoria y el pimentón hasta que estén al dente. Mezcla todo y condimenta a gusto.",
+      "ingredients": [
+        {
+          "food": "Lentejas, Secas",
+          "grams": 250
+        },
+        {
+          "food": "Zapallo Italiano (Zucchini) Verde, con Cáscara, Crudo",
+          "grams": 150
+        },
+        {
+          "food": "Zanahoria Madura, Cruda",
+          "grams": 100
+        },
+        {
+          "food": "Pimentón Rojo, Crudo",
+          "grams": 80
+        }
+      ]
+    },
+    {
+      "name": "Pescado al Horno con Papas y Espárragos",
+      "servings": 2,
+      "prepMinutes": 40,
+      "tags": [
+        "saludable"
+      ],
+      "instructions": "Corta las papas en láminas y hornéalas 15 minutos a 200°C. Agrega el pescado condimentado con sal, pimienta y jugo de limón, junto con los espárragos, y hornea 15-18 minutos más hasta que el pescado esté cocido.",
+      "ingredients": [
+        {
+          "food": "Bacalao del Atlántico, de Pesca Silvestre, Crudo",
+          "grams": 350
+        },
+        {
+          "food": "Papa Gold, Sin Cáscara, Cruda",
+          "grams": 300
+        },
+        {
+          "food": "Espárrago Verde, Crudo",
+          "grams": 150
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Bowl de Frutas con Yogur y Avena",
+      "servings": 1,
+      "prepMinutes": 5,
+      "tags": [
+        "saludable",
+        "rapida",
+        "desayuno",
+        "vegetariana"
+      ],
+      "instructions": "Corta el plátano en rodajas. Mezcla el yogur con la avena y agrega el plátano y las frutillas encima.",
+      "ingredients": [
+        {
+          "food": "Yogur Natural, Leche Entera",
+          "grams": 200
+        },
+        {
+          "food": "Plátano Maduro y Semi Maduro, Crudo",
+          "grams": 100
+        },
+        {
+          "food": "Frutillas, Crudas",
+          "grams": 80
+        },
+        {
+          "food": "Avena en Copos, Grano Entero, Tradicional",
+          "grams": 30
+        }
+      ]
+    },
+    {
+      "name": "Ensalada de Espinaca con Champiñones y Huevo",
+      "servings": 2,
+      "prepMinutes": 15,
+      "tags": [
+        "saludable",
+        "rapida",
+        "vegetariana"
+      ],
+      "instructions": "Cuece los huevos duros y córtalos en gajos. Saltea los champiñones brevemente o déjalos crudos en láminas finas.\n\nMezcla con la espinaca, agrega el queso desmenuzado y condimenta a gusto.",
+      "ingredients": [
+        {
+          "food": "Espinaca Baby",
+          "grams": 100
+        },
+        {
+          "food": "Champiñones Blancos",
+          "grams": 100
+        },
+        {
+          "food": "Huevo Grado A, Grande, Entero",
+          "grams": 100
+        },
+        {
+          "food": "Queso Fresco, Sólido",
+          "grams": 50
+        }
+      ]
+    },
+    {
+      "name": "Pavo Molido Salteado con Verduras",
+      "servings": 3,
+      "prepMinutes": 25,
+      "tags": [
+        "saludable",
+        "rapida"
+      ],
+      "instructions": "Cocina el pavo molido en un sartén caliente hasta dorar, desmenuzándolo con una cuchara de palo. Agrega el zapallo italiano, el pimentón y la cebolla, y saltea 8-10 minutos hasta que las verduras estén tiernas.",
+      "ingredients": [
+        {
+          "food": "Pavo Molido, 93% Magro / 7% Grasa, Crudo",
+          "grams": 400
+        },
+        {
+          "food": "Zapallo Italiano (Zucchini) Verde, con Cáscara, Crudo",
+          "grams": 200
+        },
+        {
+          "food": "Pimentón Rojo, Crudo",
+          "grams": 100
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 80
+        }
+      ]
+    },
+    {
+      "name": "Camarones Salteados con Verduras",
+      "servings": 2,
+      "prepMinutes": 20,
+      "tags": [
+        "saludable",
+        "rapida"
+      ],
+      "instructions": "Saltea el brócoli, el pimentón y la zanahoria hasta que estén al dente. Agrega los camarones y cocina 3-4 minutos hasta que estén rosados.\n\nCondimenta con sal, pimienta y un poco de salsa de soya si quieres.",
+      "ingredients": [
+        {
+          "food": "Camarón, de Cultivo, Crudo",
+          "grams": 300
+        },
+        {
+          "food": "Brócoli, Crudo",
+          "grams": 150
+        },
+        {
+          "food": "Pimentón Rojo, Crudo",
+          "grams": 80
+        },
+        {
+          "food": "Zanahoria Madura, Cruda",
+          "grams": 80
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Tortilla de Papas y Verduras",
+      "servings": 4,
+      "prepMinutes": 40,
+      "tags": [
+        "saludable",
+        "casera",
+        "vegetariana"
+      ],
+      "instructions": "Cuece o fríe las papas en láminas finas hasta que estén blandas. Sofríe la cebolla y el pimentón aparte.\n\nBate los huevos, mezcla con las papas y las verduras, y cocina en un sartén a fuego bajo tapado hasta que cuaje por debajo. Da vuelta con ayuda de un plato y cocina el otro lado 5 minutos más.",
+      "ingredients": [
+        {
+          "food": "Papa Gold, Sin Cáscara, Cruda",
+          "grams": 400
+        },
+        {
+          "food": "Huevo Grado A, Grande, Entero",
+          "grams": 300
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 100
+        },
+        {
+          "food": "Pimentón Rojo, Crudo",
+          "grams": 80
+        }
+      ]
+    },
+    {
+      "name": "Risotto de Champiñones",
+      "servings": 3,
+      "prepMinutes": 35,
+      "tags": [
+        "italiana",
+        "casera",
+        "vegetariana"
+      ],
+      "instructions": "Sofríe la cebolla hasta transparentar y agrega los champiñones en láminas, cocinando hasta que suelten su líquido y se doren un poco. Suma el arroz y tuéstalo 1-2 minutos revolviendo, hasta que los granos se vean translúcidos en el borde.\n\nAgrega el caldo o agua caliente de a poco (un cucharón a la vez), esperando a que el líquido se absorba casi por completo antes de añadir el siguiente, y revolviendo seguido para liberar el almidón del arroz; esto toma unos 18-20 minutos hasta que el arroz esté cremoso pero al dente. Retira del fuego y termina con el queso parmesano, revolviendo con energía hasta lograr una textura cremosa (esta mezcla final fuera del fuego es la 'mantecatura'). Deja reposar 1-2 minutos tapado antes de servir.",
+      "ingredients": [
+        {
+          "food": "Arroz Blanco, Grano Largo, No Enriquecido, Crudo",
+          "grams": 250
+        },
+        {
+          "food": "Champiñones Blancos",
+          "grams": 250
+        },
+        {
+          "food": "Queso Parmesano, Rallado",
+          "grams": 60
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 80
+        }
+      ]
+    },
+    {
+      "name": "Risotto de Zapallo",
+      "servings": 3,
+      "prepMinutes": 40,
+      "tags": [
+        "italiana",
+        "casera",
+        "vegetariana"
+      ],
+      "instructions": "Sofríe la cebolla y agrega el zapallo en cubos pequeños, cocinando 5 minutos. Suma el arroz y tuéstalo 1-2 minutos revolviendo.\n\nAgrega el caldo o agua caliente de a poco (un cucharón a la vez), esperando a que se absorba casi por completo antes de añadir el siguiente y revolviendo seguido, hasta que el arroz y el zapallo estén tiernos (unos 20-22 minutos). Retira del fuego y termina con el queso parmesano, revolviendo con energía para una textura cremosa (mantecatura). Deja reposar 1-2 minutos tapado antes de servir.",
+      "ingredients": [
+        {
+          "food": "Arroz Blanco, Grano Largo, No Enriquecido, Crudo",
+          "grams": 250
+        },
+        {
+          "food": "Zapallo Butternut (Zapallo Camote), Crudo",
+          "grams": 300
+        },
+        {
+          "food": "Queso Parmesano, Rallado",
+          "grams": 60
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 80
+        }
+      ]
+    },
+    {
+      "name": "Minestrone",
+      "servings": 4,
+      "prepMinutes": 45,
+      "tags": [
+        "italiana",
+        "casera",
+        "sopa",
+        "saludable",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Sofríe la cebolla, el apio y la zanahoria picados hasta que estén blandos. Agrega el tomate, el zapallo italiano y cubre con agua o caldo.\n\nCocina 20 minutos, agrega los porotos y cocina 10 minutos más. Ajusta sal y pimienta antes de servir.",
+      "ingredients": [
+        {
+          "food": "Porotos Cannellini en Conserva, con Sodio Agregado, Escurridos y Enjuagados",
+          "grams": 300
+        },
+        {
+          "food": "Zapallo Italiano (Zucchini) Verde, con Cáscara, Crudo",
+          "grams": 200
+        },
+        {
+          "food": "Zanahoria Madura, Cruda",
+          "grams": 100
+        },
+        {
+          "food": "Apio, Crudo",
+          "grams": 80
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 200
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 80
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Pollo a la Parmesana (Estilo Casero)",
+      "servings": 3,
+      "prepMinutes": 40,
+      "tags": [
+        "italiana",
+        "casera"
+      ],
+      "instructions": "Aplana las pechugas de pollo y pásalas por harina, luego por huevo batido. Cocina en un sartén con un poco de aceite hasta dorar por ambos lados.\n\nColoca en una fuente, cubre con la salsa para pastas y el queso mozzarella, y hornea o gratina hasta que el queso se derrita.",
+      "ingredients": [
+        {
+          "food": "Pechuga de Pollo, Sin Hueso, Sin Piel, Cruda",
+          "grams": 450
+        },
+        {
+          "food": "Huevo Grado A, Grande, Entero",
+          "grams": 100
+        },
+        {
+          "food": "Harina de Trigo Todo Uso, Enriquecida, Blanqueada",
+          "grams": 60
+        },
+        {
+          "food": "Salsa para Pastas, Tipo Marinara/Spaghetti, Lista para Servir",
+          "grams": 200
+        },
+        {
+          "food": "Queso Mozzarella, Baja Humedad, Semidescremado",
+          "grams": 100
+        }
+      ]
+    },
+    {
+      "name": "Milanesa de Carne",
+      "servings": 3,
+      "prepMinutes": 30,
+      "tags": [
+        "italiana",
+        "casera",
+        "chilena"
+      ],
+      "instructions": "Aplana los trozos de carne. Pásalos por harina y luego por huevo batido.\n\nCocina en un sartén con un poco de aceite a fuego medio-alto hasta dorar por ambos lados, unos 3-4 minutos por lado.",
+      "ingredients": [
+        {
+          "food": "Carne de Vacuno, Posta Rosada (Top Round), Sin Hueso, Calidad Choice, Cruda",
+          "grams": 450
+        },
+        {
+          "food": "Huevo Grado A, Grande, Entero",
+          "grams": 100
+        },
+        {
+          "food": "Harina de Trigo Todo Uso, Enriquecida, Blanqueada",
+          "grams": 60
+        }
+      ]
+    },
+    {
+      "name": "Ensalada Caprese",
+      "servings": 2,
+      "prepMinutes": 10,
+      "tags": [
+        "italiana",
+        "saludable",
+        "rapida",
+        "vegetariana"
+      ],
+      "instructions": "Corta el tomate y el queso mozzarella en láminas y ordénalos alternados en un plato. Agrega hojas de albahaca fresca si tienes, y aliña con aceite de oliva, sal y pimienta.",
+      "ingredients": [
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 250
+        },
+        {
+          "food": "Queso Mozzarella, Baja Humedad, Semidescremado",
+          "grams": 150
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Frittata de Verduras",
+      "servings": 3,
+      "prepMinutes": 25,
+      "tags": [
+        "italiana",
+        "casera",
+        "vegetariana"
+      ],
+      "instructions": "Bate los huevos con sal y pimienta. Saltea el zapallo italiano y el pimentón hasta que estén blandos.\n\nAgrega los huevos batidos y el queso parmesano, y cocina a fuego bajo tapado hasta que cuaje. Termina bajo el grill del horno un par de minutos si quieres dorar la superficie.",
+      "ingredients": [
+        {
+          "food": "Huevo Grado A, Grande, Entero",
+          "grams": 300
+        },
+        {
+          "food": "Zapallo Italiano (Zucchini) Verde, con Cáscara, Crudo",
+          "grams": 150
+        },
+        {
+          "food": "Pimentón Rojo, Crudo",
+          "grams": 80
+        },
+        {
+          "food": "Queso Parmesano, Rallado",
+          "grams": 40
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Estofado de Vacuno a la Italiana",
+      "servings": 4,
+      "prepMinutes": 90,
+      "tags": [
+        "italiana",
+        "casera"
+      ],
+      "instructions": "Dora la carne en trozos en un sartén u olla. Agrega la cebolla, la zanahoria y el apio picados y sofríe unos minutos.\n\nSuma el tomate y cubre con agua o caldo. Cocina tapado a fuego bajo 60-70 minutos hasta que la carne esté muy tierna, revolviendo de vez en cuando.",
+      "ingredients": [
+        {
+          "food": "Carne de Vacuno, Posta Negra (Eye Round), Sin Hueso, Solo Parte Magra, Calidad Select, Cruda",
+          "grams": 500
+        },
+        {
+          "food": "Tomate Entero, en Conserva, con Líquido, con Sal Agregada",
+          "grams": 300
+        },
+        {
+          "food": "Zanahoria Madura, Cruda",
+          "grams": 100
+        },
+        {
+          "food": "Apio, Crudo",
+          "grams": 80
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 100
+        }
+      ]
+    },
+    {
+      "name": "Berenjenas a la Parmesana",
+      "servings": 4,
+      "prepMinutes": 50,
+      "tags": [
+        "italiana",
+        "casera",
+        "vegetariana"
+      ],
+      "instructions": "Corta las berenjenas en láminas, pásalas por harina y huevo, y dóralas en un sartén con un poco de aceite. Ve armando capas en una fuente alternando berenjena, salsa para pastas y queso mozzarella.\n\nTermina con queso parmesano y hornea a 200°C 20 minutos hasta gratinar.",
+      "ingredients": [
+        {
+          "food": "Berenjena, Cruda",
+          "grams": 500
+        },
+        {
+          "food": "Huevo Grado A, Grande, Entero",
+          "grams": 100
+        },
+        {
+          "food": "Harina de Trigo Todo Uso, Enriquecida, Blanqueada",
+          "grams": 50
+        },
+        {
+          "food": "Salsa para Pastas, Tipo Marinara/Spaghetti, Lista para Servir",
+          "grams": 250
+        },
+        {
+          "food": "Queso Mozzarella, Baja Humedad, Semidescremado",
+          "grams": 150
+        },
+        {
+          "food": "Queso Parmesano, Rallado",
+          "grams": 40
+        }
+      ]
+    },
+    {
+      "name": "Ensalada Italiana de Porotos Blancos",
+      "servings": 3,
+      "prepMinutes": 10,
+      "tags": [
+        "italiana",
+        "saludable",
+        "rapida",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Mezcla los porotos con el tomate, la cebolla morada y el pimentón en cubos. Condimenta con sal, pimienta y aceite de oliva a gusto.",
+      "ingredients": [
+        {
+          "food": "Porotos Cannellini en Conserva, con Sodio Agregado, Escurridos y Enjuagados",
+          "grams": 350
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 150
+        },
+        {
+          "food": "Pimentón Amarillo, Crudo",
+          "grams": 80
+        },
+        {
+          "food": "Cebolla Morada, Cruda",
+          "grams": 50
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Sopa de Lentejas a la Italiana",
+      "servings": 4,
+      "prepMinutes": 40,
+      "tags": [
+        "italiana",
+        "casera",
+        "sopa",
+        "saludable",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Sofríe la cebolla, el apio y la zanahoria picados. Agrega las lentejas y el tomate, cubre con agua o caldo y cocina 25-30 minutos hasta que las lentejas estén tiernas.",
+      "ingredients": [
+        {
+          "food": "Lentejas, Secas",
+          "grams": 250
+        },
+        {
+          "food": "Apio, Crudo",
+          "grams": 80
+        },
+        {
+          "food": "Zanahoria Madura, Cruda",
+          "grams": 100
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 150
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 80
+        }
+      ]
+    },
+    {
+      "name": "Bruschetta Casera",
+      "servings": 4,
+      "prepMinutes": 15,
+      "tags": [
+        "italiana",
+        "rapida",
+        "vegetariana"
+      ],
+      "instructions": "Tuesta las rebanadas de pan. Frota un diente de ajo por encima si quieres.\n\nCorta el tomate en cubos pequeños, mezcla con un poco de aceite de oliva, sal y albahaca si tienes, y sirve sobre el pan con el queso mozzarella en trozos.",
+      "ingredients": [
+        {
+          "food": "Pan Integral, Comercial",
+          "grams": 200
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 250
+        },
+        {
+          "food": "Queso Mozzarella, Baja Humedad, Semidescremado",
+          "grams": 100
+        }
+      ],
+      "otherIngredients": [
+        "Sal, a gusto"
+      ]
+    },
+    {
+      "name": "Polenta con Champiñones",
+      "servings": 3,
+      "prepMinutes": 30,
+      "tags": [
+        "italiana",
+        "casera",
+        "vegetariana"
+      ],
+      "instructions": "Cocina la harina de maíz en agua hirviendo con sal, revolviendo constantemente hasta que espese, unos 15-20 minutos. Aparte, saltea los champiñones hasta dorar.\n\nSirve la polenta con los champiñones y el queso parmesano encima.",
+      "ingredients": [
+        {
+          "food": "Harina de Maíz (Masa Harina), Blanca o Amarilla, Seca",
+          "grams": 200
+        },
+        {
+          "food": "Champiñones Blancos",
+          "grams": 250
+        },
+        {
+          "food": "Queso Parmesano, Rallado",
+          "grams": 50
+        }
+      ],
+      "otherIngredients": [
+        "Sal, a gusto"
+      ]
+    },
+    {
+      "name": "Ensalada de Rúcula con Parmesano y Piñones",
+      "servings": 2,
+      "prepMinutes": 10,
+      "tags": [
+        "italiana",
+        "saludable",
+        "rapida",
+        "vegetariana"
+      ],
+      "instructions": "Mezcla la rúcula con el queso parmesano en láminas y los piñones. Aliña con aceite de oliva, sal y un poco de jugo de limón a gusto.",
+      "ingredients": [
+        {
+          "food": "Rúcula Baby, Cruda",
+          "grams": 100
+        },
+        {
+          "food": "Queso Parmesano, Rallado",
+          "grams": 40
+        },
+        {
+          "food": "Piñones, Crudos",
+          "grams": 30
+        }
+      ],
+      "otherIngredients": [
+        "Sal, a gusto"
+      ]
+    },
+    {
+      "name": "Ensalada de Frutas",
+      "servings": 4,
+      "prepMinutes": 15,
+      "tags": [
+        "saludable",
+        "rapida",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Corta toda la fruta en trozos y mezcla en un bowl. Sirve fría.",
+      "ingredients": [
+        {
+          "food": "Manzana Fuji, con Cáscara, Cruda",
+          "grams": 200
+        },
+        {
+          "food": "Plátano Maduro y Semi Maduro, Crudo",
+          "grams": 150
+        },
+        {
+          "food": "Naranja Navel, Cruda",
+          "grams": 200
+        },
+        {
+          "food": "Uva Roja, Sin Semillas, Cruda",
+          "grams": 150
+        }
+      ]
+    },
+    {
+      "name": "Yogur con Nueces y Frutos Secos",
+      "servings": 1,
+      "prepMinutes": 5,
+      "tags": [
+        "saludable",
+        "rapida",
+        "colacion",
+        "vegetariana"
+      ],
+      "instructions": "Mezcla el yogur con las nueces y las almendras picadas.",
+      "ingredients": [
+        {
+          "food": "Yogur Griego, Natural, Leche Entera",
+          "grams": 200
+        },
+        {
+          "food": "Nueces de Nogal, Mitades, Crudas",
+          "grams": 20
+        },
+        {
+          "food": "Almendras Enteras, Crudas",
+          "grams": 20
+        }
+      ]
+    },
+    {
+      "name": "Pebre Chileno",
+      "servings": 4,
+      "prepMinutes": 10,
+      "tags": [
+        "chilena",
+        "rapida",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Pica finamente el tomate, la cebolla, el cilantro y el ají. Mezcla todo, condimenta con sal, aceite y un poco de jugo de limón, y deja reposar 10 minutos antes de servir como acompañamiento.",
+      "ingredients": [
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 200
+        },
+        {
+          "food": "Cebolla Morada, Cruda",
+          "grams": 80
+        },
+        {
+          "food": "Coriander (Cilantro) Leaves, Crudo",
+          "grams": 20
+        },
+        {
+          "food": "Ají Jalapeño, Sin Semillas, Crudo",
+          "grams": 20
+        }
+      ],
+      "otherIngredients": [
+        "Sal, a gusto"
+      ]
+    },
+    {
+      "name": "Ensalada de Repollo",
+      "servings": 4,
+      "prepMinutes": 10,
+      "tags": [
+        "chilena",
+        "saludable",
+        "rapida",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Ralla el repollo y la zanahoria finamente. Aliña con jugo de limón, sal y aceite a gusto.",
+      "ingredients": [
+        {
+          "food": "Repollo Verde, Crudo",
+          "grams": 300
+        },
+        {
+          "food": "Zanahoria Madura, Cruda",
+          "grams": 100
+        }
+      ],
+      "otherIngredients": [
+        "Sal, a gusto"
+      ]
+    },
+    {
+      "name": "Guiso de Choclo y Zapallo",
+      "servings": 4,
+      "prepMinutes": 35,
+      "tags": [
+        "chilena",
+        "casera",
+        "vegetariana"
+      ],
+      "instructions": "Sofríe la cebolla, agrega el zapallo en cubos y cocina 15 minutos. Suma el choclo y la leche, y cocina 10 minutos más. Muele parcialmente si prefieres una textura más cremosa.",
+      "ingredients": [
+        {
+          "food": "Choclo, Dulce, Amarillo, En Conserva, Entero Kernel, Escurrido",
+          "grams": 300
+        },
+        {
+          "food": "Zapallo Butternut (Zapallo Camote), Crudo",
+          "grams": 300
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 100
+        },
+        {
+          "food": "Leche Entera, 3,25% Grasa, con Vitamina D Agregada",
+          "grams": 150
+        }
+      ]
+    },
+    {
+      "name": "Pollo con Puré de Papas y Ensalada",
+      "servings": 4,
+      "prepMinutes": 40,
+      "tags": [
+        "chilena",
+        "casera"
+      ],
+      "instructions": "Hornea o dora el pollo hasta que esté cocido por dentro. Cuece la papa y hazla puré con la leche caliente. Sirve con ensalada de lechuga y tomate.",
+      "ingredients": [
+        {
+          "food": "Trutro Entero de Pollo, Sin Hueso, Sin Piel, Crudo",
+          "grams": 500
+        },
+        {
+          "food": "Papa Gold, Sin Cáscara, Cruda",
+          "grams": 400
+        },
+        {
+          "food": "Leche Entera, 3,25% Grasa, con Vitamina D Agregada",
+          "grams": 150
+        },
+        {
+          "food": "Lechuga de Hoja Verde, Cruda",
+          "grams": 100
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 100
+        }
+      ]
+    },
+    {
+      "name": "Chuletas de Cerdo a la Chilena con Ensalada",
+      "servings": 3,
+      "prepMinutes": 30,
+      "tags": [
+        "chilena",
+        "casera"
+      ],
+      "instructions": "Cocina las chuletas a la plancha con sal y pimienta hasta dorar por ambos lados. Cuece o fríe las papas. Sirve con ensalada de tomate y cebolla.",
+      "ingredients": [
+        {
+          "food": "Chuleta de Cerdo, Corte Centro, Cruda",
+          "grams": 450
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 200
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 100
+        },
+        {
+          "food": "Papa Gold, Sin Cáscara, Cruda",
+          "grams": 300
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Salmón a la Chilena con Ensalada de Palta",
+      "servings": 2,
+      "prepMinutes": 25,
+      "tags": [
+        "chilena",
+        "saludable"
+      ],
+      "instructions": "Cocina el salmón a la plancha u horno con sal, pimienta y jugo de limón. Sirve con ensalada de palta y tomate.",
+      "ingredients": [
+        {
+          "food": "Salmón del Atlántico, de Cultivo, Crudo",
+          "grams": 350
+        },
+        {
+          "food": "Palta Hass, Pelada, Cruda",
+          "grams": 150
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 150
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Ensalada de Choclo con Tomate",
+      "servings": 3,
+      "prepMinutes": 10,
+      "tags": [
+        "chilena",
+        "rapida",
+        "saludable",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Mezcla el choclo, el tomate y la cebolla. Condimenta con sal, aceite y un poco de jugo de limón.",
+      "ingredients": [
+        {
+          "food": "Choclo, Dulce, Amarillo, En Conserva, Entero Kernel, Escurrido",
+          "grams": 250
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 200
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 50
+        }
+      ],
+      "otherIngredients": [
+        "Sal, a gusto"
+      ]
+    },
+    {
+      "name": "Arroz Graneado con Huevo Frito y Palta",
+      "servings": 2,
+      "prepMinutes": 20,
+      "tags": [
+        "chilena",
+        "rapida",
+        "vegetariana"
+      ],
+      "instructions": "Cuece el arroz. Fríe o cuece el huevo. Sirve el arroz con el huevo y la palta en láminas encima.",
+      "ingredients": [
+        {
+          "food": "Arroz Blanco, Grano Largo, No Enriquecido, Crudo",
+          "grams": 200
+        },
+        {
+          "food": "Huevo Grado A, Grande, Entero",
+          "grams": 100
+        },
+        {
+          "food": "Palta Hass, Pelada, Cruda",
+          "grams": 150
+        }
+      ]
+    },
+    {
+      "name": "Pollo al Jugo con Papas",
+      "servings": 4,
+      "prepMinutes": 55,
+      "tags": [
+        "chilena",
+        "casera"
+      ],
+      "instructions": "Sofríe la cebolla, dora el pollo, agrega el tomate y un poco de agua, y cocina tapado 25 minutos. Suma las papas en trozos y cocina 20 minutos más hasta que estén blandas.",
+      "ingredients": [
+        {
+          "food": "Trutro Entero de Pollo, Sin Hueso, Sin Piel, Crudo",
+          "grams": 500
+        },
+        {
+          "food": "Papa Roja, Sin Cáscara, Cruda",
+          "grams": 400
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 100
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 150
+        }
+      ]
+    },
+    {
+      "name": "Ensalada Rusa",
+      "servings": 4,
+      "prepMinutes": 30,
+      "tags": [
+        "chilena",
+        "casera",
+        "vegetariana"
+      ],
+      "instructions": "Cuece la papa y la zanahoria en cubos hasta que estén blandas. Cuece el huevo duro y pícalo.\n\nMezcla todo con las arvejas y mayonesa a gusto (no incluida en el conteo nutricional).",
+      "ingredients": [
+        {
+          "food": "Papa Gold, Sin Cáscara, Cruda",
+          "grams": 300
+        },
+        {
+          "food": "Zanahoria Madura, Cruda",
+          "grams": 150
+        },
+        {
+          "food": "Arvejas Verdes Dulces, en Conserva, con Sodio y Azúcar Agregados, Escurridas y Enjuagadas",
+          "grams": 150
+        },
+        {
+          "food": "Huevo Grado A, Grande, Entero",
+          "grams": 100
+        }
+      ]
+    },
+    {
+      "name": "Zapallo Camote Asado",
+      "servings": 3,
+      "prepMinutes": 30,
+      "tags": [
+        "chilena",
+        "saludable",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Corta el camote en cubos, condimenta con sal, pimienta y un poco de aceite, y hornea a 200°C 25 minutos hasta dorar.",
+      "ingredients": [
+        {
+          "food": "Camote (Batata), Pulpa Naranja, Sin Cáscara, Crudo",
+          "grams": 400
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Cazuela de Cerdo",
+      "servings": 4,
+      "prepMinutes": 75,
+      "tags": [
+        "chilena",
+        "casera",
+        "sopa"
+      ],
+      "instructions": "Cuece el cerdo en agua con sal 25 minutos. Agrega la cebolla, la zanahoria y el zapallo, y cocina 15 minutos.\n\nSuma la papa y el choclo y cocina 20 minutos más hasta que las papas estén tiernas.",
+      "ingredients": [
+        {
+          "food": "Lomo de Cerdo, Sin Hueso, Crudo",
+          "grams": 450
+        },
+        {
+          "food": "Papa Russet, Sin Cáscara, Cruda",
+          "grams": 400
+        },
+        {
+          "food": "Zapallo Butternut (Zapallo Camote), Crudo",
+          "grams": 200
+        },
+        {
+          "food": "Choclo Dulce, Granos Amarillos y Blancos, Fresco, Crudo",
+          "grams": 150
+        },
+        {
+          "food": "Zanahoria Madura, Cruda",
+          "grams": 100
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 100
+        }
+      ],
+      "otherIngredients": [
+        "Sal, a gusto"
+      ]
+    },
+    {
+      "name": "Guiso de Porotos Negros",
+      "servings": 4,
+      "prepMinutes": 30,
+      "tags": [
+        "chilena",
+        "casera",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Sofríe la cebolla, agrega el zapallo italiano y el tomate, y cocina 10 minutos. Suma los porotos y cocina 10 minutos más hasta integrar.",
+      "ingredients": [
+        {
+          "food": "Porotos Negros en Conserva, con Sodio Agregado, Escurridos y Enjuagados",
+          "grams": 350
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 100
+        },
+        {
+          "food": "Zapallo Italiano (Zucchini) Verde, con Cáscara, Crudo",
+          "grams": 150
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 100
+        }
+      ]
+    },
+    {
+      "name": "Ensalada de Naranja y Cebolla Morada",
+      "servings": 2,
+      "prepMinutes": 10,
+      "tags": [
+        "chilena",
+        "saludable",
+        "rapida",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Corta la naranja en gajos o rodajas y mezcla con la cebolla morada en pluma fina. Aliña con sal, aceite y un poco de orégano si tienes.",
+      "ingredients": [
+        {
+          "food": "Naranja Navel, Cruda",
+          "grams": 200
+        },
+        {
+          "food": "Cebolla Morada, Cruda",
+          "grams": 60
+        }
+      ],
+      "otherIngredients": [
+        "Sal, a gusto"
+      ]
+    },
+    {
+      "name": "Porotos con Riendas",
+      "servings": 4,
+      "prepMinutes": 45,
+      "tags": [
+        "chilena",
+        "casera"
+      ],
+      "instructions": "Cuece los porotos con el zapallo y la cebolla hasta que el guiso espese. Agrega la pasta quebrada en trozos y cocina hasta que esté al dente, unos 10-12 minutos más.",
+      "ingredients": [
+        {
+          "food": "Porotos Rojos (Kidney) Oscuros en Conserva, con Sodio y Azúcar Agregados, Escurridos y Enjuagados",
+          "grams": 300
+        },
+        {
+          "food": "Pasta / Fideos, Seco, Enriquecido",
+          "grams": 150
+        },
+        {
+          "food": "Zapallo Butternut (Zapallo Camote), Crudo",
+          "grams": 150
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 80
+        }
+      ]
+    },
+    {
+      "name": "Espagueti Aglio e Olio",
+      "servings": 4,
+      "prepMinutes": 20,
+      "tags": [
+        "italiana",
+        "casera",
+        "rapida",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Cuece la pasta en agua bien salada hasta que esté al dente, reservando media taza del agua de cocción antes de escurrir. Mientras tanto, calienta el aceite de oliva a fuego bajo y dora el ajo en láminas lentamente, sin dejar que se queme ni tome color oscuro (se pone amargo).\n\nAgrega la pasta escurrida directo al sartén junto con un poco del agua reservada, y saltea 1-2 minutos revolviendo para que la salsa emulsione y cubra la pasta. Termina con perejil picado y pimienta negra a gusto.",
+      "ingredients": [
+        {
+          "food": "Pasta / Fideos, Seco, Enriquecido",
+          "grams": 350
+        },
+        {
+          "food": "Ajo, Crudo",
+          "grams": 20
+        },
+        {
+          "food": "Aceite, Oliva, Ensalada O Cooking",
+          "grams": 40
+        }
+      ]
+    },
+    {
+      "name": "Pasta al Pesto",
+      "servings": 4,
+      "prepMinutes": 15,
+      "tags": [
+        "italiana",
+        "rapida",
+        "vegetariana"
+      ],
+      "instructions": "Cuece la pasta en agua bien salada hasta que esté al dente, reservando un poco del agua de cocción antes de escurrir. Retira del fuego, mezcla la pasta con la salsa pesto fuera del fuego (para que no se cocine y pierda color), agregando un poco del agua reservada hasta lograr una consistencia cremosa que cubra bien la pasta. Sirve con el queso parmesano y los piñones encima.",
+      "ingredients": [
+        {
+          "food": "Pasta / Fideos, Seco, Enriquecido",
+          "grams": 350
+        },
+        {
+          "food": "Salsa, Pesto, Listo para Servir, Larga Duración",
+          "grams": 150
+        },
+        {
+          "food": "Queso Parmesano, Rallado",
+          "grams": 40
+        },
+        {
+          "food": "Piñones, Crudos",
+          "grams": 20
+        }
+      ]
+    },
+    {
+      "name": "Pasta con Atún",
+      "servings": 4,
+      "prepMinutes": 20,
+      "tags": [
+        "italiana",
+        "rapida"
+      ],
+      "instructions": "Cuece la pasta. Sofríe la cebolla y el tomate, agrega el atún desmenuzado y las aceitunas, y mezcla con la pasta escurrida.",
+      "ingredients": [
+        {
+          "food": "Pasta / Fideos, Seco, Enriquecido",
+          "grams": 350
+        },
+        {
+          "food": "Atún Claro, en Conserva al Agua, Escurrido",
+          "grams": 200
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 150
+        },
+        {
+          "food": "Aceitunas Verdes, Manzanilla, Rellenas con Pimiento",
+          "grams": 40
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 60
+        }
+      ]
+    },
+    {
+      "name": "Pasta a la Boloñesa Casera",
+      "servings": 4,
+      "prepMinutes": 50,
+      "tags": [
+        "italiana",
+        "casera"
+      ],
+      "instructions": "Sofríe la cebolla, la zanahoria y el apio. Agrega la carne molida y dora.\n\nSuma el tomate y cocina a fuego bajo 25-30 minutos. Sirve sobre la pasta cocida.",
+      "ingredients": [
+        {
+          "food": "Pasta / Fideos, Seco, Enriquecido",
+          "grams": 350
+        },
+        {
+          "food": "Carne de Vacuno Molida, 80% Magra / 20% Grasa, Cruda",
+          "grams": 400
+        },
+        {
+          "food": "Tomate Entero, en Conserva, con Líquido, con Sal Agregada",
+          "grams": 300
+        },
+        {
+          "food": "Zanahoria Madura, Cruda",
+          "grams": 80
+        },
+        {
+          "food": "Apio, Crudo",
+          "grams": 60
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 100
+        }
+      ]
+    },
+    {
+      "name": "Pasta con Pollo y Champiñones",
+      "servings": 4,
+      "prepMinutes": 30,
+      "tags": [
+        "italiana",
+        "casera"
+      ],
+      "instructions": "Cocina el pollo en trozos hasta dorar, agrega los champiñones y saltea. Suma la crema y cocina 5 minutos. Mezcla con la pasta cocida.",
+      "ingredients": [
+        {
+          "food": "Pasta / Fideos, Seco, Enriquecido",
+          "grams": 350
+        },
+        {
+          "food": "Pechuga de Pollo, Sin Hueso, Sin Piel, Cruda",
+          "grams": 350
+        },
+        {
+          "food": "Champiñones Blancos",
+          "grams": 250
+        },
+        {
+          "food": "Crema Espesa (Heavy Cream)",
+          "grams": 150
+        }
+      ]
+    },
+    {
+      "name": "Pasta con Camarones al Ajillo",
+      "servings": 4,
+      "prepMinutes": 25,
+      "tags": [
+        "italiana",
+        "rapida"
+      ],
+      "instructions": "Cuece la pasta. Saltea el ajo en el aceite de oliva, agrega los camarones y cocina 3-4 minutos. Mezcla con la pasta escurrida.",
+      "ingredients": [
+        {
+          "food": "Pasta / Fideos, Seco, Enriquecido",
+          "grams": 350
+        },
+        {
+          "food": "Camarón, de Cultivo, Crudo",
+          "grams": 350
+        },
+        {
+          "food": "Ajo, Crudo",
+          "grams": 20
+        },
+        {
+          "food": "Aceite, Oliva, Ensalada O Cooking",
+          "grams": 30
+        }
+      ]
+    },
+    {
+      "name": "Pasta con Espinaca y Queso",
+      "servings": 4,
+      "prepMinutes": 20,
+      "tags": [
+        "italiana",
+        "vegetariana"
+      ],
+      "instructions": "Cuece la pasta. Saltea la espinaca hasta que reduzca.\n\nMezcla con la ricotta, el parmesano y la pasta escurrida, agregando un poco del agua de cocción para lograr una salsa cremosa.",
+      "ingredients": [
+        {
+          "food": "Pasta / Fideos, Seco, Enriquecido",
+          "grams": 350
+        },
+        {
+          "food": "Espinaca Madura",
+          "grams": 200
+        },
+        {
+          "food": "Queso Ricotta, Leche Entera",
+          "grams": 200
+        },
+        {
+          "food": "Queso Parmesano, Rallado",
+          "grams": 40
+        }
+      ]
+    },
+    {
+      "name": "Pasta con Salsa de Tomate y Albahaca",
+      "servings": 4,
+      "prepMinutes": 20,
+      "tags": [
+        "italiana",
+        "rapida",
+        "vegetariana"
+      ],
+      "instructions": "Cuece la pasta. Calienta la salsa de tomate con la albahaca picada. Mezcla con la pasta escurrida y sirve con parmesano.",
+      "ingredients": [
+        {
+          "food": "Pasta / Fideos, Seco, Enriquecido",
+          "grams": 350
+        },
+        {
+          "food": "Salsa de Tomate, en Conserva, con Sal Agregada",
+          "grams": 300
+        },
+        {
+          "food": "Albahaca, Fresco",
+          "grams": 15
+        },
+        {
+          "food": "Queso Parmesano, Rallado",
+          "grams": 40
+        }
+      ]
+    },
+    {
+      "name": "Pasta con Berenjenas",
+      "servings": 4,
+      "prepMinutes": 35,
+      "tags": [
+        "italiana",
+        "casera",
+        "vegetariana"
+      ],
+      "instructions": "Corta y dora la berenjena en un sartén con un poco de aceite. Agrega la salsa de tomate y cocina 10 minutos. Mezcla con la pasta cocida y sirve con parmesano.",
+      "ingredients": [
+        {
+          "food": "Pasta / Fideos, Seco, Enriquecido",
+          "grams": 350
+        },
+        {
+          "food": "Berenjena, Cruda",
+          "grams": 300
+        },
+        {
+          "food": "Salsa para Pastas, Tipo Marinara/Spaghetti, Lista para Servir",
+          "grams": 250
+        },
+        {
+          "food": "Queso Parmesano, Rallado",
+          "grams": 40
+        }
+      ]
+    },
+    {
+      "name": "Pasta e Ceci (Pasta con Garbanzos)",
+      "servings": 4,
+      "prepMinutes": 30,
+      "tags": [
+        "italiana",
+        "casera",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Sofríe el ajo, agrega el tomate y los garbanzos, y cocina 15 minutos, machacando parte de los garbanzos para espesar. Mezcla con la pasta cocida.",
+      "ingredients": [
+        {
+          "food": "Pasta / Fideos, Seco, Enriquecido",
+          "grams": 300
+        },
+        {
+          "food": "Garbanzos, en Conserva, con Sodio Agregado, Escurridos y Enjuagados",
+          "grams": 350
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 200
+        },
+        {
+          "food": "Ajo, Crudo",
+          "grams": 15
+        }
+      ]
+    },
+    {
+      "name": "Pasta con Brócoli y Ajo",
+      "servings": 4,
+      "prepMinutes": 20,
+      "tags": [
+        "italiana",
+        "rapida",
+        "vegetariana"
+      ],
+      "instructions": "Cuece el brócoli junto con la pasta los últimos minutos. Saltea el ajo en el aceite de oliva. Mezcla todo y sirve con parmesano.",
+      "ingredients": [
+        {
+          "food": "Pasta / Fideos, Seco, Enriquecido",
+          "grams": 350
+        },
+        {
+          "food": "Brócoli, Crudo",
+          "grams": 300
+        },
+        {
+          "food": "Ajo, Crudo",
+          "grams": 20
+        },
+        {
+          "food": "Aceite, Oliva, Ensalada O Cooking",
+          "grams": 30
+        },
+        {
+          "food": "Queso Parmesano, Rallado",
+          "grams": 40
+        }
+      ]
+    },
+    {
+      "name": "Pasta Estilo Carbonara Casera",
+      "servings": 4,
+      "prepMinutes": 25,
+      "tags": [
+        "italiana",
+        "casera"
+      ],
+      "instructions": "Cuece la pasta en agua bien salada, reservando una taza del agua de cocción antes de escurrir. Mientras tanto, dora el tocino en trozos en un sartén hasta que esté crocante y retira del fuego.\n\nBate los huevos con el queso parmesano y abundante pimienta negra molida. Agrega la pasta caliente escurrida al sartén del tocino y revuelve.\n\nFuera del fuego (si está muy caliente el huevo se cuaja en grumos en vez de formar salsa), incorpora la mezcla de huevo y queso, agregando agua de cocción de a poco y revolviendo rápido y constante hasta lograr una salsa cremosa que cubra la pasta.",
+      "ingredients": [
+        {
+          "food": "Pasta / Fideos, Seco, Enriquecido",
+          "grams": 350
+        },
+        {
+          "food": "Tocino de Cerdo Curado, Cocido, de Restaurante",
+          "grams": 200
+        },
+        {
+          "food": "Huevo Grado A, Grande, Entero",
+          "grams": 200
+        },
+        {
+          "food": "Queso Parmesano, Rallado",
+          "grams": 60
+        }
+      ]
+    },
+    {
+      "name": "Pasta con Salmón",
+      "servings": 4,
+      "prepMinutes": 25,
+      "tags": [
+        "italiana"
+      ],
+      "instructions": "Cocina el salmón en trozos hasta dorar. Agrega la crema y un poco de jugo de limón, y cocina 5 minutos. Mezcla con la pasta cocida.",
+      "ingredients": [
+        {
+          "food": "Pasta / Fideos, Seco, Enriquecido",
+          "grams": 350
+        },
+        {
+          "food": "Salmón del Atlántico, de Cultivo, Crudo",
+          "grams": 300
+        },
+        {
+          "food": "Crema Espesa (Heavy Cream)",
+          "grams": 150
+        },
+        {
+          "food": "Limones, Crudo, Sin Peel",
+          "grams": 20
+        }
+      ]
+    },
+    {
+      "name": "Pasta Primavera",
+      "servings": 4,
+      "prepMinutes": 25,
+      "tags": [
+        "italiana",
+        "vegetariana"
+      ],
+      "instructions": "Saltea el zapallo italiano, el pimentón y la zanahoria hasta que estén al dente. Mezcla con la pasta cocida y sirve con parmesano.",
+      "ingredients": [
+        {
+          "food": "Pasta / Fideos, Seco, Enriquecido",
+          "grams": 350
+        },
+        {
+          "food": "Zapallo Italiano (Zucchini) Verde, con Cáscara, Crudo",
+          "grams": 150
+        },
+        {
+          "food": "Pimentón Rojo, Crudo",
+          "grams": 100
+        },
+        {
+          "food": "Zanahoria Madura, Cruda",
+          "grams": 80
+        },
+        {
+          "food": "Queso Parmesano, Rallado",
+          "grams": 40
+        }
+      ]
+    },
+    {
+      "name": "Pasta con Porotos Blancos",
+      "servings": 4,
+      "prepMinutes": 25,
+      "tags": [
+        "italiana",
+        "casera",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Sofríe el ajo en el aceite de oliva, agrega el tomate y los porotos, y cocina 10 minutos. Mezcla con la pasta cocida.",
+      "ingredients": [
+        {
+          "food": "Pasta / Fideos, Seco, Enriquecido",
+          "grams": 300
+        },
+        {
+          "food": "Porotos Cannellini en Conserva, con Sodio Agregado, Escurridos y Enjuagados",
+          "grams": 300
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 150
+        },
+        {
+          "food": "Ajo, Crudo",
+          "grams": 15
+        },
+        {
+          "food": "Aceite, Oliva, Ensalada O Cooking",
+          "grams": 25
+        }
+      ]
+    },
+    {
+      "name": "Pollo al Limón",
+      "servings": 3,
+      "prepMinutes": 25,
+      "tags": [
+        "italiana",
+        "saludable",
+        "rapida"
+      ],
+      "instructions": "Marina el pollo con jugo de limón, sal y pimienta. Cocina a la plancha u horno hasta dorar y cocido por dentro.",
+      "ingredients": [
+        {
+          "food": "Pechuga de Pollo, Sin Hueso, Sin Piel, Cruda",
+          "grams": 450
+        },
+        {
+          "food": "Limones, Crudo, Sin Peel",
+          "grams": 60
+        },
+        {
+          "food": "Aceite, Oliva, Ensalada O Cooking",
+          "grams": 20
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Ensalada de Hinojo y Naranja",
+      "servings": 2,
+      "prepMinutes": 10,
+      "tags": [
+        "italiana",
+        "saludable",
+        "rapida",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Corta el hinojo en láminas finas y la naranja en gajos. Mezcla y aliña con aceite de oliva y sal.",
+      "ingredients": [
+        {
+          "food": "Hinojo, Bulbo, Crudo",
+          "grams": 200
+        },
+        {
+          "food": "Naranja Navel, Cruda",
+          "grams": 200
+        }
+      ],
+      "otherIngredients": [
+        "Sal, a gusto"
+      ]
+    },
+    {
+      "name": "Camarones al Ajillo con Pan",
+      "servings": 3,
+      "prepMinutes": 20,
+      "tags": [
+        "italiana",
+        "rapida"
+      ],
+      "instructions": "Saltea el ajo en el aceite de oliva, agrega los camarones y cocina 3-4 minutos. Sirve con pan tostado para acompañar.",
+      "ingredients": [
+        {
+          "food": "Camarón, de Cultivo, Crudo",
+          "grams": 350
+        },
+        {
+          "food": "Ajo, Crudo",
+          "grams": 25
+        },
+        {
+          "food": "Aceite, Oliva, Ensalada O Cooking",
+          "grams": 30
+        },
+        {
+          "food": "Pan Blanco, Comercial",
+          "grams": 150
+        }
+      ]
+    },
+    {
+      "name": "Salmón con Salsa Pesto",
+      "servings": 2,
+      "prepMinutes": 20,
+      "tags": [
+        "italiana",
+        "saludable",
+        "rapida"
+      ],
+      "instructions": "Cocina el salmón a la plancha u horno con sal y pimienta. Sirve con la salsa pesto por encima.",
+      "ingredients": [
+        {
+          "food": "Salmón del Atlántico, de Cultivo, Crudo",
+          "grams": 400
+        },
+        {
+          "food": "Salsa, Pesto, Listo para Servir, Larga Duración",
+          "grams": 100
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Risotto de Camarones",
+      "servings": 3,
+      "prepMinutes": 35,
+      "tags": [
+        "italiana",
+        "casera"
+      ],
+      "instructions": "Sofríe la cebolla, agrega el arroz y tuéstalo 1-2 minutos revolviendo hasta que los bordes se vean translúcidos. Incorpora el caldo o agua caliente de a poco (un cucharón a la vez), esperando a que se absorba casi por completo antes de añadir el siguiente y revolviendo seguido.\n\nAgrega los camarones los últimos 5 minutos de cocción, cuando el arroz ya esté casi listo. Retira del fuego y termina con el parmesano, revolviendo con energía para una textura cremosa (mantecatura).",
+      "ingredients": [
+        {
+          "food": "Arroz Blanco, Grano Largo, No Enriquecido, Crudo",
+          "grams": 250
+        },
+        {
+          "food": "Camarón, de Cultivo, Crudo",
+          "grams": 300
+        },
+        {
+          "food": "Queso Parmesano, Rallado",
+          "grams": 40
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 80
+        }
+      ]
+    },
+    {
+      "name": "Sopa de Garbanzos a la Italiana",
+      "servings": 4,
+      "prepMinutes": 35,
+      "tags": [
+        "italiana",
+        "casera",
+        "sopa",
+        "saludable",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Sofríe el ajo, la zanahoria y el apio. Agrega el tomate y los garbanzos, cubre con agua y cocina 20 minutos.",
+      "ingredients": [
+        {
+          "food": "Garbanzos, en Conserva, con Sodio Agregado, Escurridos y Enjuagados",
+          "grams": 350
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 200
+        },
+        {
+          "food": "Apio, Crudo",
+          "grams": 60
+        },
+        {
+          "food": "Zanahoria Madura, Cruda",
+          "grams": 80
+        },
+        {
+          "food": "Ajo, Crudo",
+          "grams": 15
+        }
+      ]
+    },
+    {
+      "name": "Ensalada de Aceitunas y Queso",
+      "servings": 2,
+      "prepMinutes": 10,
+      "tags": [
+        "italiana",
+        "rapida",
+        "vegetariana"
+      ],
+      "instructions": "Corta el queso y el tomate en cubos, mezcla con las aceitunas y aliña con aceite de oliva.",
+      "ingredients": [
+        {
+          "food": "Aceitunas Verdes, Manzanilla, Rellenas con Pimiento",
+          "grams": 60
+        },
+        {
+          "food": "Queso Mozzarella, Baja Humedad, Semidescremado",
+          "grams": 150
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 200
+        }
+      ]
+    },
+    {
+      "name": "Champiñones al Ajillo",
+      "servings": 3,
+      "prepMinutes": 15,
+      "tags": [
+        "italiana",
+        "rapida",
+        "saludable",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Saltea el ajo en el aceite de oliva a fuego medio, agrega los champiñones y cocina 8-10 minutos hasta dorar. Sazona con sal, pimienta y perejil a gusto.",
+      "ingredients": [
+        {
+          "food": "Champiñones Blancos",
+          "grams": 300
+        },
+        {
+          "food": "Ajo, Crudo",
+          "grams": 20
+        },
+        {
+          "food": "Aceite, Oliva, Ensalada O Cooking",
+          "grams": 25
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Bowl de Garbanzos Asados con Verduras",
+      "servings": 3,
+      "prepMinutes": 30,
+      "tags": [
+        "saludable",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Hornea los garbanzos y las verduras con un poco de aceite, sal y pimienta a 200°C por 20-25 minutos hasta dorar.",
+      "ingredients": [
+        {
+          "food": "Garbanzos, en Conserva, con Sodio Agregado, Escurridos y Enjuagados",
+          "grams": 350
+        },
+        {
+          "food": "Zapallo Italiano (Zucchini) Verde, con Cáscara, Crudo",
+          "grams": 200
+        },
+        {
+          "food": "Pimentón Rojo, Crudo",
+          "grams": 100
+        },
+        {
+          "food": "Aceite, Oliva, Ensalada O Cooking",
+          "grams": 20
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Pollo al Limón con Ensalada Verde",
+      "servings": 2,
+      "prepMinutes": 25,
+      "tags": [
+        "saludable",
+        "rapida"
+      ],
+      "instructions": "Cocina el pollo marinado en jugo de limón a la plancha. Sirve con ensalada de lechuga y tomate.",
+      "ingredients": [
+        {
+          "food": "Pechuga de Pollo, Sin Hueso, Sin Piel, Cruda",
+          "grams": 350
+        },
+        {
+          "food": "Limones, Crudo, Sin Peel",
+          "grams": 40
+        },
+        {
+          "food": "Lechuga de Hoja Verde, Cruda",
+          "grams": 150
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 150
+        }
+      ]
+    },
+    {
+      "name": "Salmón con Miel y Limón",
+      "servings": 2,
+      "prepMinutes": 20,
+      "tags": [
+        "saludable",
+        "rapida"
+      ],
+      "instructions": "Mezcla la miel con el jugo de limón y unta sobre el salmón. Hornea a 200°C 15 minutos.",
+      "ingredients": [
+        {
+          "food": "Salmón del Atlántico, de Cultivo, Crudo",
+          "grams": 350
+        },
+        {
+          "food": "Miel",
+          "grams": 30
+        },
+        {
+          "food": "Limones, Crudo, Sin Peel",
+          "grams": 30
+        }
+      ]
+    },
+    {
+      "name": "Avena Nocturna con Miel y Frutillas",
+      "servings": 1,
+      "prepMinutes": 5,
+      "tags": [
+        "saludable",
+        "rapida",
+        "desayuno",
+        "vegetariana"
+      ],
+      "instructions": "Mezcla la avena con el yogur y la miel, refrigera toda la noche, y agrega las frutillas antes de servir.",
+      "ingredients": [
+        {
+          "food": "Avena en Copos, Grano Entero, Tradicional",
+          "grams": 50
+        },
+        {
+          "food": "Yogur Natural, Leche Entera",
+          "grams": 150
+        },
+        {
+          "food": "Miel",
+          "grams": 20
+        },
+        {
+          "food": "Frutillas, Crudas",
+          "grams": 100
+        }
+      ]
+    },
+    {
+      "name": "Tostadas con Palta y Huevo Poché",
+      "servings": 2,
+      "prepMinutes": 15,
+      "tags": [
+        "saludable",
+        "rapida",
+        "desayuno",
+        "vegetariana"
+      ],
+      "instructions": "Tuesta el pan, unta la palta machacada y agrega el huevo cocido a gusto (poché o frito) encima.",
+      "ingredients": [
+        {
+          "food": "Pan Integral, Comercial",
+          "grams": 100
+        },
+        {
+          "food": "Palta Hass, Pelada, Cruda",
+          "grams": 100
+        },
+        {
+          "food": "Huevo Grado A, Grande, Entero",
+          "grams": 100
+        }
+      ]
+    },
+    {
+      "name": "Ensalada de Pepino y Yogur",
+      "servings": 3,
+      "prepMinutes": 10,
+      "tags": [
+        "saludable",
+        "rapida",
+        "vegetariana"
+      ],
+      "instructions": "Ralla el pepino y mezcla con el yogur y el ajo picado fino. Condimenta con sal.",
+      "ingredients": [
+        {
+          "food": "Pepino, con Cáscara, Crudo",
+          "grams": 250
+        },
+        {
+          "food": "Yogur Griego, Natural, Leche Entera",
+          "grams": 200
+        },
+        {
+          "food": "Ajo, Crudo",
+          "grams": 5
+        }
+      ],
+      "otherIngredients": [
+        "Sal, a gusto"
+      ]
+    },
+    {
+      "name": "Bowl de Atún y Porotos Negros",
+      "servings": 2,
+      "prepMinutes": 10,
+      "tags": [
+        "saludable",
+        "rapida"
+      ],
+      "instructions": "Mezcla todos los ingredientes y condimenta con sal, pimienta y aceite de oliva a gusto.",
+      "ingredients": [
+        {
+          "food": "Atún Claro, en Conserva al Agua, Escurrido",
+          "grams": 200
+        },
+        {
+          "food": "Porotos Negros en Conserva, con Sodio Agregado, Escurridos y Enjuagados",
+          "grams": 300
+        },
+        {
+          "food": "Pimentón Rojo, Crudo",
+          "grams": 100
+        },
+        {
+          "food": "Cebolla Morada, Cruda",
+          "grams": 60
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Camote Asado con Garbanzos Especiados",
+      "servings": 3,
+      "prepMinutes": 35,
+      "tags": [
+        "saludable",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Corta el camote en cubos, mezcla con los garbanzos, un poco de aceite y comino a gusto, y hornea a 200°C 25 minutos.",
+      "ingredients": [
+        {
+          "food": "Camote (Batata), Pulpa Naranja, Sin Cáscara, Crudo",
+          "grams": 350
+        },
+        {
+          "food": "Garbanzos, en Conserva, con Sodio Agregado, Escurridos y Enjuagados",
+          "grams": 300
+        }
+      ]
+    },
+    {
+      "name": "Sopa de Zapallo",
+      "servings": 4,
+      "prepMinutes": 35,
+      "tags": [
+        "saludable",
+        "casera",
+        "sopa",
+        "vegetariana"
+      ],
+      "instructions": "Sofríe la cebolla, agrega el zapallo y la zanahoria con agua o caldo, y cocina 25 minutos hasta blando. Licúa y agrega la leche.",
+      "ingredients": [
+        {
+          "food": "Zapallo Butternut (Zapallo Camote), Crudo",
+          "grams": 500
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 100
+        },
+        {
+          "food": "Zanahoria Madura, Cruda",
+          "grams": 100
+        },
+        {
+          "food": "Leche Entera, 3,25% Grasa, con Vitamina D Agregada",
+          "grams": 150
+        }
+      ]
+    },
+    {
+      "name": "Ensalada de Naranja y Aceitunas",
+      "servings": 2,
+      "prepMinutes": 10,
+      "tags": [
+        "saludable",
+        "italiana",
+        "rapida",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Corta la naranja en rodajas, mezcla con las aceitunas y la cebolla en pluma, y aliña con aceite de oliva.",
+      "ingredients": [
+        {
+          "food": "Naranja Navel, Cruda",
+          "grams": 200
+        },
+        {
+          "food": "Aceitunas Verdes, Manzanilla, Rellenas con Pimiento",
+          "grams": 50
+        },
+        {
+          "food": "Cebolla Morada, Cruda",
+          "grams": 40
+        }
+      ]
+    },
+    {
+      "name": "Pollo con Champiñones y Espinaca",
+      "servings": 3,
+      "prepMinutes": 30,
+      "tags": [
+        "saludable",
+        "casera"
+      ],
+      "instructions": "Dora el pollo, agrega los champiñones y saltea. Suma la espinaca y la crema, y cocina hasta que la espinaca reduzca.",
+      "ingredients": [
+        {
+          "food": "Pechuga de Pollo, Sin Hueso, Sin Piel, Cruda",
+          "grams": 400
+        },
+        {
+          "food": "Champiñones Blancos",
+          "grams": 200
+        },
+        {
+          "food": "Espinaca Madura",
+          "grams": 150
+        },
+        {
+          "food": "Crema Espesa (Heavy Cream)",
+          "grams": 100
+        }
+      ]
+    },
+    {
+      "name": "Ensalada de Betarraga y Naranja",
+      "servings": 3,
+      "prepMinutes": 30,
+      "tags": [
+        "saludable",
+        "rapida",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Cuece la betarraga y córtala en cubos junto con la naranja. Mezcla con la rúcula y aliña con aceite de oliva.",
+      "ingredients": [
+        {
+          "food": "Betarraga, Cruda",
+          "grams": 250
+        },
+        {
+          "food": "Naranja Navel, Cruda",
+          "grams": 200
+        },
+        {
+          "food": "Rúcula Baby, Cruda",
+          "grams": 60
+        }
+      ]
+    },
+    {
+      "name": "Tortilla de Espinaca y Queso Fresco",
+      "servings": 3,
+      "prepMinutes": 20,
+      "tags": [
+        "saludable",
+        "rapida",
+        "vegetariana"
+      ],
+      "instructions": "Saltea la espinaca. Bate los huevos y mezcla con la espinaca y el queso. Cocina en un sartén hasta cuajar.",
+      "ingredients": [
+        {
+          "food": "Huevo Grado A, Grande, Entero",
+          "grams": 250
+        },
+        {
+          "food": "Espinaca Madura",
+          "grams": 150
+        },
+        {
+          "food": "Queso Fresco, Sólido",
+          "grams": 80
+        }
+      ]
+    },
+    {
+      "name": "Bowl de Salmón con Arroz Integral",
+      "servings": 2,
+      "prepMinutes": 30,
+      "tags": [
+        "saludable"
+      ],
+      "instructions": "Cuece el arroz integral. Cocina el salmón a la plancha con jugo de limón. Sirve todo junto con la espinaca cruda o salteada.",
+      "ingredients": [
+        {
+          "food": "Salmón del Atlántico, de Cultivo, Crudo",
+          "grams": 300
+        },
+        {
+          "food": "Arroz Integral, Grano Largo, No Enriquecido, Crudo",
+          "grams": 180
+        },
+        {
+          "food": "Espinaca Baby",
+          "grams": 100
+        },
+        {
+          "food": "Limones, Crudo, Sin Peel",
+          "grams": 20
+        }
+      ]
+    },
+    {
+      "name": "Batido de Plátano y Avena",
+      "servings": 1,
+      "prepMinutes": 5,
+      "tags": [
+        "saludable",
+        "rapida",
+        "desayuno",
+        "vegetariana"
+      ],
+      "instructions": "Licúa todos los ingredientes hasta lograr una textura homogénea.",
+      "ingredients": [
+        {
+          "food": "Plátano Maduro y Semi Maduro, Crudo",
+          "grams": 150
+        },
+        {
+          "food": "Avena en Copos, Grano Entero, Tradicional",
+          "grams": 40
+        },
+        {
+          "food": "Leche Entera, 3,25% Grasa, con Vitamina D Agregada",
+          "grams": 200
+        },
+        {
+          "food": "Miel",
+          "grams": 15
+        }
+      ]
+    },
+    {
+      "name": "Ensalada Griega Simple",
+      "servings": 2,
+      "prepMinutes": 10,
+      "tags": [
+        "saludable",
+        "rapida",
+        "vegetariana"
+      ],
+      "instructions": "Corta el tomate y el pepino en cubos, mezcla con el queso feta desmenuzado y las aceitunas, y aliña con aceite de oliva y orégano.",
+      "ingredients": [
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 200
+        },
+        {
+          "food": "Pepino, con Cáscara, Crudo",
+          "grams": 150
+        },
+        {
+          "food": "Queso Feta, Leche Entera, Desmenuzado",
+          "grams": 100
+        },
+        {
+          "food": "Aceitunas Verdes, Manzanilla, Rellenas con Pimiento",
+          "grams": 50
+        }
+      ]
+    },
+    {
+      "name": "Yogur con Miel y Nueces",
+      "servings": 1,
+      "prepMinutes": 5,
+      "tags": [
+        "saludable",
+        "rapida",
+        "colacion",
+        "vegetariana"
+      ],
+      "instructions": "Mezcla el yogur con la miel y agrega las nueces picadas encima.",
+      "ingredients": [
+        {
+          "food": "Yogur Griego, Natural, Leche Entera",
+          "grams": 200
+        },
+        {
+          "food": "Miel",
+          "grams": 20
+        },
+        {
+          "food": "Nueces de Nogal, Mitades, Crudas",
+          "grams": 20
+        }
+      ]
+    },
+    {
+      "name": "Ensalada de Naranja, Palta y Rúcula",
+      "servings": 2,
+      "prepMinutes": 10,
+      "tags": [
+        "saludable",
+        "italiana",
+        "rapida",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Corta la naranja y la palta, mezcla con la rúcula y aliña con aceite de oliva y sal.",
+      "ingredients": [
+        {
+          "food": "Naranja Navel, Cruda",
+          "grams": 200
+        },
+        {
+          "food": "Palta Hass, Pelada, Cruda",
+          "grams": 120
+        },
+        {
+          "food": "Rúcula Baby, Cruda",
+          "grams": 60
+        }
+      ],
+      "otherIngredients": [
+        "Sal, a gusto"
+      ]
+    },
+    {
+      "name": "Minestrone con Pasta",
+      "servings": 4,
+      "prepMinutes": 45,
+      "tags": [
+        "italiana",
+        "casera",
+        "sopa",
+        "vegetariana",
+        "vegana"
+      ],
+      "instructions": "Sofríe la cebolla, el apio y la zanahoria. Agrega el tomate, el zapallo italiano y los porotos, cubre con agua y cocina 20 minutos.\n\nSuma la pasta los últimos 10-12 minutos de cocción hasta que esté al dente.",
+      "ingredients": [
+        {
+          "food": "Porotos Cannellini en Conserva, con Sodio Agregado, Escurridos y Enjuagados",
+          "grams": 250
+        },
+        {
+          "food": "Pasta / Fideos, Seco, Enriquecido",
+          "grams": 100
+        },
+        {
+          "food": "Zapallo Italiano (Zucchini) Verde, con Cáscara, Crudo",
+          "grams": 150
+        },
+        {
+          "food": "Zanahoria Madura, Cruda",
+          "grams": 80
+        },
+        {
+          "food": "Apio, Crudo",
+          "grams": 60
+        },
+        {
+          "food": "Tomate Roma (Perita)",
+          "grams": 150
+        },
+        {
+          "food": "Cebolla Amarilla, Cruda",
+          "grams": 80
+        }
+      ]
+    },
+    {
+      "name": "Pasta Cacio e Pepe",
+      "servings": 4,
+      "prepMinutes": 20,
+      "tags": [
+        "italiana",
+        "rapida",
+        "vegetariana"
+      ],
+      "instructions": "Cuece la pasta en agua con poca sal (el queso ya aporta bastante), reservando al menos una taza del agua de cocción antes de escurrir.\n\nMientras la pasta cuece, machaca los granos de pimienta (en un mortero, o con el fondo de un sartén) hasta dejarlos gruesos, no en polvo fino, y tuéstalos en un sartén seco a fuego medio durante 1 minuto, hasta que huelan aromáticos. Agrega un poco del agua de cocción al sartén y deja hervir suave.\n\nEn un bowl aparte, mezcla el queso parmesano con un poco de agua de cocción tibia (no hirviendo, para que el queso no se apelmace en grumos) hasta formar una crema.\n\nRetira el sartén del fuego, agrega la pasta escurrida y la crema de queso, y mezcla rápido, sumando agua de cocción de a poco hasta lograr una salsa sedosa que cubra bien la pasta. Sirve de inmediato.",
+      "ingredients": [
+        {
+          "food": "Pasta / Fideos, Seco, Enriquecido",
+          "grams": 350
+        },
+        {
+          "food": "Queso Parmesano, Rallado",
+          "grams": 150
+        },
+        {
+          "food": "Especias, Pimienta Negra",
+          "grams": 12
+        }
+      ],
+      "otherIngredients": [
+        "Sal y pimienta, a gusto"
+      ]
+    },
+    {
+      "name": "Champiñones Rellenos con Queso",
+      "servings": 4,
+      "prepMinutes": 30,
+      "tags": [
+        "italiana",
+        "casera",
+        "vegetariana"
+      ],
+      "instructions": "Quita el tallo a los champiñones y rellénalos con los quesos mezclados. Hornea a 200°C 15 minutos hasta gratinar.",
+      "ingredients": [
+        {
+          "food": "Champiñones Blancos",
+          "grams": 400
+        },
+        {
+          "food": "Queso Mozzarella, Baja Humedad, Semidescremado",
+          "grams": 100
+        },
+        {
+          "food": "Queso Parmesano, Rallado",
+          "grams": 40
+        }
+      ]
+    },
+    {
+      "name": "Pan Casero Blanco",
+      "servings": 10,
+      "prepMinutes": 180,
+      "tags": [
+        "casera",
+        "masas"
+      ],
+      "instructions": "Disuelve la levadura en agua tibia (no caliente, se muere la levadura) con una pizca de azúcar, y deja reposar 5-10 minutos hasta que espume.\n\nMezcla la harina con la sal en un bowl grande, haz un hueco en el centro y vierte la mezcla de levadura. Integra con las manos hasta formar una masa.\n\nAmasa sobre una superficie enharinada durante 8-10 minutos, hasta que la masa esté lisa y elástica (se estira sin romperse). Forma una bola, colócala en un bowl aceitado, tapa con un paño húmedo y deja levar en un lugar tibio 1 a 1,5 horas, hasta que duplique su tamaño.\n\nDesgasifica la masa presionándola suavemente, dale forma de pan y colócala en un molde o bandeja. Deja levar 30-40 minutos más. Hornea a 220°C durante 25-30 minutos hasta que esté dorado y suene hueco al golpear la base.",
+      "ingredients": [
+        {
+          "food": "Harina de Trigo Todo Uso, Enriquecida, Blanqueada",
+          "grams": 500
+        }
+      ],
+      "otherIngredients": [
+        "Agua tibia, 300 ml",
+        "Levadura seca, 7 g",
+        "Sal, 10 g",
+        "Azúcar, 5 g (para activar la levadura)"
+      ]
+    },
+    {
+      "name": "Pan Integral Casero",
+      "servings": 10,
+      "prepMinutes": 180,
+      "tags": [
+        "casera",
+        "saludable",
+        "masas"
+      ],
+      "instructions": "Disuelve la levadura en agua tibia con una pizca de azúcar y deja reposar 5-10 minutos hasta que espume.\n\nMezcla la harina integral con la sal, haz un hueco en el centro y vierte la levadura disuelta. Integra hasta formar una masa (la harina integral absorbe algo más de agua que la blanca, así que agrega un poco más si la masa queda muy seca).\n\nAmasa 10 minutos hasta que esté elástica. Deja levar tapada en un lugar tibio 1 a 1,5 horas hasta que duplique tamaño (con harina integral el levado suele ser un poco más lento).\n\nDesgasifica, forma el pan, colócalo en un molde y deja levar 30-40 minutos más. Hornea a 220°C durante 30-35 minutos hasta que esté dorado y suene hueco al golpear la base.",
+      "ingredients": [
+        {
+          "food": "Harina de Trigo Integral, No Enriquecida",
+          "grams": 500
+        }
+      ],
+      "otherIngredients": [
+        "Agua tibia, 320 ml",
+        "Levadura seca, 7 g",
+        "Sal, 10 g",
+        "Azúcar, 5 g (para activar la levadura)"
+      ]
+    },
+    {
+      "name": "Masa para Pizza Casera",
+      "servings": 4,
+      "prepMinutes": 100,
+      "tags": [
+        "italiana",
+        "casera",
+        "masas"
+      ],
+      "instructions": "Disuelve la levadura en agua tibia con una pizca de azúcar y deja espumar 5-10 minutos.\n\nMezcla la harina con la sal, haz un hueco y agrega la levadura disuelta junto con el aceite de oliva. Integra y amasa 8-10 minutos hasta lograr una masa lisa y elástica.\n\nForma una bola, colócala en un bowl aceitado, tapa y deja levar 1 hora en un lugar tibio hasta que duplique su tamaño.\n\nDivide la masa en 2-4 bollos según el tamaño de pizza que quieras. Estira cada uno con las manos o un uslero sobre una superficie enharinada, agrega tus ingredientes favoritos y hornea en horno bien caliente (240-250°C) durante 10-15 minutos hasta que el borde esté dorado.",
+      "ingredients": [
+        {
+          "food": "Harina de Trigo Todo Uso, Enriquecida, Blanqueada",
+          "grams": 400
+        },
+        {
+          "food": "Aceite, Oliva, Ensalada O Cooking",
+          "grams": 30
+        }
+      ],
+      "otherIngredients": [
+        "Agua tibia, 240 ml",
+        "Levadura seca, 7 g",
+        "Sal, 8 g",
+        "Azúcar, 5 g (para activar la levadura)"
+      ]
+    },
+    {
+      "name": "Masa Fresca de Pasta al Huevo",
+      "servings": 4,
+      "prepMinutes": 60,
+      "tags": [
+        "italiana",
+        "casera",
+        "masas",
+        "vegetariana"
+      ],
+      "instructions": "Vierte la harina en un montículo sobre la mesa y haz un hueco grande en el centro (como un volcán). Rompe los huevos dentro del hueco.\n\nCon un tenedor, bate los huevos suavemente e incorpora la harina de a poco desde las paredes internas hacia el centro, hasta que la mezcla espese y no se escurra. Termina de integrar con las manos.\n\nAmasa sobre la mesa (sin harina extra si puedes evitarlo) durante 8-10 minutos, hasta que la masa esté lisa, elástica y ya no se sienta pegajosa. Forma una bola, envuélvela en film y déjala reposar a temperatura ambiente 30 minutos (esto relaja el gluten y hace que sea mucho más fácil de estirar).\n\nEstira la masa bien fina con un uslero o máquina de pasta, y córtala en la forma que quieras (tallarines, láminas para lasaña, etc.). Cuece en agua hirviendo con sal solo 2-3 minutos: la pasta fresca se cocina mucho más rápido que la seca.",
+      "ingredients": [
+        {
+          "food": "Harina Tipo 00",
+          "grams": 300
+        },
+        {
+          "food": "Huevo Grado A, Grande, Entero",
+          "grams": 200
+        }
+      ],
+      "otherIngredients": [
+        "Sal, 1 pizca (opcional)"
+      ]
+    },
+    {
+      "name": "Focaccia Casera",
+      "servings": 8,
+      "prepMinutes": 150,
+      "tags": [
+        "italiana",
+        "casera",
+        "masas",
+        "vegetariana"
+      ],
+      "instructions": "Disuelve la levadura en agua tibia con una pizca de azúcar y deja espumar 5-10 minutos.\n\nMezcla la harina con la sal, agrega la levadura disuelta y la mitad del aceite de oliva, e integra hasta formar una masa bastante húmeda y pegajosa (así debe ser, no agregues más harina). Amasa 5 minutos dentro del mismo bowl con las manos aceitadas.\n\nTapa y deja levar en un lugar tibio 1 hora hasta que duplique su tamaño. Vuelca la masa en una bandeja bien aceitada, estírala con las manos hasta cubrir el molde, y deja levar 30 minutos más.\n\nHunde los dedos en la masa para hacer los hoyitos característicos, riega con el resto del aceite de oliva y sal gruesa por encima, y hornea a 220°C durante 20-25 minutos hasta que esté dorada.",
+      "ingredients": [
+        {
+          "food": "Harina de Trigo Todo Uso, Enriquecida, Blanqueada",
+          "grams": 500
+        },
+        {
+          "food": "Aceite, Oliva, Ensalada O Cooking",
+          "grams": 60
+        }
+      ],
+      "otherIngredients": [
+        "Agua tibia, 350 ml",
+        "Levadura seca, 7 g",
+        "Sal, 10 g",
+        "Azúcar, 5 g (para activar la levadura)",
+        "Sal gruesa, para espolvorear encima"
+      ]
+    },
+    {
+      "name": "Masa para Empanadas Chilenas",
+      "servings": 12,
+      "prepMinutes": 60,
+      "tags": [
+        "chilena",
+        "casera",
+        "masas"
+      ],
+      "instructions": "Derrite la manteca o margarina y mézclala con agua tibia y sal.\n\nHaz un hueco en la harina y vierte el líquido tibio de a poco, integrando con las manos hasta formar una masa. A diferencia del pan, amasa solo lo necesario para que se junte (uno o dos minutos): no quieres desarrollar mucho el gluten, para que la masa quede quebradiza y no elástica.\n\nDeja reposar la masa tapada 30 minutos a temperatura ambiente. Divide en bollos y estira cada uno bien fino con un uslero hasta formar discos.\n\nRellena cada disco con tu pino favorito, humedece el borde con un poco de agua, dobla por la mitad y cierra haciendo el repulgue (dobleces apretando el borde). Hornea a 200°C 20-25 minutos hasta dorar, o fríe en aceite bien caliente si prefieres empanadas fritas.",
+      "ingredients": [
+        {
+          "food": "Harina de Trigo Todo Uso, Enriquecida, Blanqueada",
+          "grams": 500
+        }
+      ],
+      "otherIngredients": [
+        "Agua tibia, 200 ml",
+        "Manteca o margarina derretida, 100 g",
+        "Sal, 10 g"
+      ]
+    },
+    {
+      "name": "Marraqueta (Pan Batido) Casera",
+      "servings": 8,
+      "prepMinutes": 150,
+      "tags": [
+        "chilena",
+        "casera",
+        "masas",
+        "saludable"
+      ],
+      "instructions": "Disuelve la levadura en agua tibia con una pizca de azúcar y deja espumar 5-10 minutos.\n\nMezcla la harina con la sal, agrega el agua con levadura y integra hasta formar una masa. A diferencia de otros panes, la marraqueta se trabaja \"batiéndola\": amasa con fuerza, levantando la masa y golpeándola contra la mesa repetidamente durante 10-12 minutos. Esto desarrolla mucho el gluten y es lo que le da su miga aireada y corteza crujiente características.\n\nForma una bola, tapa y deja levar 1 hora en un lugar tibio hasta que duplique su tamaño. Divide en 4 porciones iguales; junta las porciones de a pares y presiona el centro de cada par con el canto de la mano o un palo de amasar para marcar la división característica en cuatro \"pancitos\" unidos.\n\nDeja levar 20-30 minutos más sobre la bandeja. Hornea a 230-250°C (lo más caliente que permita tu horno) durante 20-25 minutos; si puedes, agrega un poco de vapor al inicio del horneado (por ejemplo un recipiente con agua caliente dentro del horno) para lograr una corteza más crujiente.",
+      "ingredients": [
+        {
+          "food": "Harina Panadera Blanca, Enriquecida, Sin Blanquear",
+          "grams": 500
+        }
+      ],
+      "otherIngredients": [
+        "Agua tibia, 300 ml",
+        "Levadura seca, 7 g",
+        "Sal, 10 g",
+        "Azúcar, 5 g (para activar la levadura)"
+      ]
+    },
+    {
+      "name": "Hallullas Caseras",
+      "servings": 8,
+      "prepMinutes": 120,
+      "tags": [
+        "chilena",
+        "casera",
+        "masas"
+      ],
+      "instructions": "Disuelve la levadura en agua tibia con una pizca de azúcar y deja espumar 5-10 minutos.\n\nDerrite la manteca o margarina y mézclala con la harina y la sal hasta que quede una textura arenosa. Agrega el agua con levadura e integra hasta formar una masa. Amasa 8-10 minutos: a diferencia de la marraqueta, aquí no buscas desarrollar tanto el gluten, así que amasa con menos fuerza.\n\nDeja levar tapada 45-60 minutos hasta que casi duplique su tamaño. Divide en 8 bollos, estira cada uno con un uslero hasta formar discos de 1-1,5 cm de grosor, y pínchalos varias veces con un tenedor por toda la superficie (esto evita que suban demasiado y les da su textura característica más plana y densa que la marraqueta).\n\nDeja reposar 15-20 minutos más y hornea a 200-220°C durante 15-20 minutos hasta que doren.",
+      "ingredients": [
+        {
+          "food": "Harina de Trigo Todo Uso, Enriquecida, Blanqueada",
+          "grams": 500
+        }
+      ],
+      "otherIngredients": [
+        "Agua tibia, 250 ml",
+        "Levadura seca, 7 g",
+        "Sal, 8 g",
+        "Azúcar, 5 g (para activar la levadura)",
+        "Manteca o margarina, 60 g"
+      ]
+    },
+    {
+      "name": "Churrascas Caseras",
+      "servings": 8,
+      "prepMinutes": 45,
+      "tags": [
+        "chilena",
+        "casera",
+        "masas",
+        "rapida"
+      ],
+      "instructions": "Derrite la manteca o margarina y mézclala con la harina, el polvo de hornear y la sal. Agrega agua o leche tibia de a poco hasta formar una masa suave que no se pegue en las manos (a diferencia de los panes con levadura, la churrasca no necesita reposo largo porque no lleva levadura, solo polvo de hornear).\n\nDivide en 8 bollos y estira cada uno con un uslero hasta formar discos delgados, de medio centímetro más o menos.\n\nCocina en un sartén o plancha caliente (sin aceite) a fuego medio, 2-3 minutos por lado, hasta que se doren con algunas manchas más oscuras y se inflen un poco. No uses fuego muy alto o se queman por fuera antes de cocinarse por dentro.",
+      "ingredients": [
+        {
+          "food": "Harina de Trigo Todo Uso, Enriquecida, Blanqueada",
+          "grams": 400
+        }
+      ],
+      "otherIngredients": [
+        "Agua o leche tibia, 200 ml",
+        "Manteca o margarina, 50 g",
+        "Polvo de hornear, 10 g",
+        "Sal, 5 g"
+      ]
+    },
+    {
+      "name": "Dobladitas Caseras",
+      "servings": 10,
+      "prepMinutes": 120,
+      "tags": [
+        "chilena",
+        "casera",
+        "masas"
+      ],
+      "instructions": "Disuelve la levadura en agua tibia con una pizca de azúcar y deja espumar 5-10 minutos.\n\nDerrite la manteca o margarina y mézclala con la harina y la sal. Agrega el agua con levadura e integra hasta formar una masa suave. Amasa 8 minutos hasta que esté lisa.\n\nDeja levar tapada 45-60 minutos hasta que duplique su tamaño. Divide en porciones pequeñas (del tamaño de un huevo) y estira cada una en un óvalo delgado con el uslero. Pinta la mitad de la masa con un poco de manteca derretida o aceite, y dobla la otra mitad por encima (de ahí el nombre \"dobladita\"), presionando suavemente el borde para sellar.\n\nDeja reposar 15-20 minutos más sobre la bandeja y hornea a 200-220°C durante 15-18 minutos hasta que doren.",
+      "ingredients": [
+        {
+          "food": "Harina de Trigo Todo Uso, Enriquecida, Blanqueada",
+          "grams": 500
+        }
+      ],
+      "otherIngredients": [
+        "Agua tibia, 280 ml",
+        "Levadura seca, 7 g",
+        "Sal, 8 g",
+        "Azúcar, 5 g (para activar la levadura)",
+        "Manteca o margarina, 60 g (mitad para la masa, mitad para pintar)"
+      ]
+    }
+  ]
+}

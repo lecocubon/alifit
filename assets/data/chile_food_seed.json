@@ -1,0 +1,70 @@
+{
+  "seedVersion": "2026-07-23.2",
+  "aliases": [],
+  "foods": [
+    {
+      "slug": "marraqueta",
+      "name": "Marraqueta",
+      "category": "Panadería",
+      "baseUnit": "g",
+      "completeness": "partial",
+      "notes": "Fuente: composición nutricional del pan chileno, adaptada de tablas INTA (doctorgrekin.cl/tabla-nutricional-del-pan). Sin dato de azúcares; se asume 0 g.",
+      "nutrition": {
+        "calories": 272,
+        "protein": 10.8,
+        "carbs": 49.7,
+        "fat": 2.4,
+        "fiber": 2.2,
+        "sugar": 0,
+        "sodium": 602
+      },
+      "servings": [
+        { "label": "1 Marraqueta Completa (~90g)", "gramsEquivalent": 90 },
+        { "label": "Media Marraqueta (~45g)", "gramsEquivalent": 45 },
+        { "label": "Cuarto De Marraqueta (~22g)", "gramsEquivalent": 22 }
+      ]
+    },
+    {
+      "slug": "hallulla",
+      "name": "Hallulla",
+      "category": "Panadería",
+      "baseUnit": "g",
+      "completeness": "partial",
+      "notes": "Fuente: composición nutricional del pan chileno, adaptada de tablas INTA (doctorgrekin.cl/tabla-nutricional-del-pan). Sin dato de fibra ni azúcares.",
+      "nutrition": {
+        "calories": 363,
+        "protein": 9.1,
+        "carbs": 53.6,
+        "fat": 12.5,
+        "fiber": 0,
+        "sugar": 0,
+        "sodium": 564
+      },
+      "servings": [
+        { "label": "1 Hallulla Completa (~100g)", "gramsEquivalent": 100 },
+        { "label": "Media Hallulla (~50g)", "gramsEquivalent": 50 }
+      ]
+    },
+    {
+      "slug": "pan_amasado",
+      "name": "Pan Amasado",
+      "category": "Panadería",
+      "baseUnit": "g",
+      "completeness": "partial",
+      "notes": "Fuente: composición nutricional del pan chileno, adaptada de tablas INTA (doctorgrekin.cl/tabla-nutricional-del-pan). Sin dato de azúcares; se asume 0 g.",
+      "nutrition": {
+        "calories": 400,
+        "protein": 8.6,
+        "carbs": 85.7,
+        "fat": 2.9,
+        "fiber": 1.5,
+        "sugar": 0,
+        "sodium": 564
+      },
+      "servings": [
+        { "label": "1 Pan Amasado (~80g)", "gramsEquivalent": 80 },
+        { "label": "Medio Pan Amasado (~40g)", "gramsEquivalent": 40 }
+      ]
+    }
+  ]
+}

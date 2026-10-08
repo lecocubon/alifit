@@ -1,0 +1,60 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Datos crudos de USDA FoodData Central (solo para regenerar el asset JSON,
+# no se empaquetan en la app). Ver tool/usda_import/import_usda.dart.
+/tool/usda_import/raw/
+/tool/usda_import/raw_sr_legacy/
+
+# Keystore de firma de release: nunca debe subirse a un repositorio.
+/android/key.properties
+/android/app/*.jks
+/android/app/*.keystore
+
+# Datos personales (perfil del usuario, guía de su nutricionista): se
+# importan en la app desde un archivo y nunca van al repositorio público.
+mi_perfil*.json
+/assets/data/nutri_guide*.json

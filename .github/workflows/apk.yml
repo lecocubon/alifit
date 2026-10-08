@@ -1,0 +1,120 @@
+name: APK instalable
+
+# Compila AliFit firmada y la publica como release de GitHub. La app revisa
+# esa release al abrirse y avisa en Inicio cuando hay una versión nueva, así
+# que para actualizar el teléfono no hace falta conectarlo al PC.
+#
+# Para publicar una versión:
+#   1. Subir `version:` en pubspec.yaml (ej. 1.1.0+2 -> 1.2.0+3). El número
+#      después del "+" tiene que crecer siempre: si no, Android no la acepta
+#      como actualización.
+#   2. Agregar sus cambios arriba en CAMBIOS.md (la app los muestra al avisar).
+#   3. git commit, git tag v1.2.0, git push origin main v1.2.0
+#
+# Necesita cuatro secretos del repositorio (Settings -> Secrets and variables
+# -> Actions):
+#   ANDROID_KEYSTORE        android/app/alifit-release.jks en base64
+#   ANDROID_STORE_PASSWORD  storePassword de android/key.properties
+#   ANDROID_KEY_ALIAS       keyAlias de android/key.properties
+#   ANDROID_KEY_PASSWORD    keyPassword de android/key.properties
+# Tienen que ser los mismos del PC: si el APK se firma con otra clave, Android
+# no lo acepta como actualización y habría que desinstalar (perdiendo datos).
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Revisar secretos y versión
+        id: version
+        env:
+          KEYSTORE: ${{ secrets.ANDROID_KEYSTORE }}
+        run: |
+          if [ -z "$KEYSTORE" ]; then
+            echo "Falta el secreto ANDROID_KEYSTORE. Los pasos están en el encabezado de este archivo." >&2
+            exit 1
+          fi
+          full=$(grep -oP '^version:\s*\K\S+' pubspec.yaml)
+          version=${full%%+*}
+          if [ "$GITHUB_REF_TYPE" = "tag" ] && [ "$GITHUB_REF_NAME" != "v$version" ]; then
+            echo "El tag $GITHUB_REF_NAME no coincide con la versión de pubspec.yaml ($full)." >&2
+            exit 1
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.44.7
+          cache: true
+
+      - run: flutter pub get
+      - run: flutter analyze
+      - run: flutter test --timeout 120s
+
+      - name: Escribir la clave de firma
+        env:
+          KEYSTORE: ${{ secrets.ANDROID_KEYSTORE }}
+          STORE_PASSWORD: ${{ secrets.ANDROID_STORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          printf '%s' "$KEYSTORE" | base64 -d > android/app/alifit-release.jks
+          {
+            echo "storeFile=alifit-release.jks"
+            echo "storePassword=$STORE_PASSWORD"
+            echo "keyAlias=$KEY_ALIAS"
+            echo "keyPassword=$KEY_PASSWORD"
+          } > android/key.properties
+
+      - run: flutter build apk --release
+
+      - name: Borrar la clave del runner
+        if: always()
+        run: rm -f android/app/alifit-release.jks android/key.properties
+
+      - name: Verificar que no quedó con la firma debug
+        run: |
+          # Sin key.properties, build.gradle.kts firma con la clave debug sin
+          # avisar, y un APK así no puede actualizar la app ya instalada.
+          apksigner=$(ls "$ANDROID_HOME"/build-tools/*/apksigner | sort -V | tail -1)
+          "$apksigner" verify --print-certs build/app/outputs/flutter-apk/app-release.apk | tee firma.txt
+          if grep -q "CN=Android Debug" firma.txt; then
+            echo "El APK quedó firmado con la clave debug." >&2
+            exit 1
+          fi
+          cp build/app/outputs/flutter-apk/app-release.apk AliFit.apk
+
+      - name: Armar las notas de la versión
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          # La sección "## <versión>" de CAMBIOS.md, hasta la siguiente.
+          awk -v v="## $VERSION" '$0 == v {on=1; next} /^## / {on=0} on' CAMBIOS.md > notas.md
+          {
+            echo
+            echo "Para instalar o actualizar: descarga AliFit.apk desde el teléfono y ábrelo."
+            echo "Si ya tienes AliFit, se actualiza y tus datos se conservan."
+          } >> notas.md
+          cat notas.md
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          name: AliFit ${{ steps.version.outputs.version }}
+          body_path: notas.md
+          files: AliFit.apk

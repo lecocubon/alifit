@@ -1,0 +1,70 @@
+{
+  "tipo": "alifit-perfil",
+  "nombre": "Perfil de ejemplo",
+  "metas": {
+    "calorias": 1900,
+    "carbohidratos": 190,
+    "proteinas": 120,
+    "grasas": 74
+  },
+  "guiaNutri": {
+    "title": "Guía de ejemplo",
+    "source": "Datos inventados para los tests",
+    "date": "2026-10-07",
+    "intro": ["Una porción de cada grupo aporta lo indicado."],
+    "groups": [
+      {
+        "name": "Cereales / carbohidratos",
+        "subgroups": [
+          {
+            "portion": {"calories": 140, "protein": 3, "carbs": 30, "fat": 1},
+            "blocks": [
+              {
+                "quality": "igModerado",
+                "foods": [
+                  {"name": "Avena natural o tradicional", "measure": "1/2 taza", "grams": 40},
+                  {"name": "Arroz blanco cocido", "measure": "3/4 taza", "grams": 100},
+                  {"name": "Cuscús cocido", "measure": "3/4 taza", "grams": 100},
+                  {"name": "Cuscús crudo", "grams": 35}
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Verduras",
+        "subgroups": [
+          {
+            "label": "Libre consumo",
+            "portion": {"calories": 10, "protein": 1, "carbs": 2, "fat": 0},
+            "blocks": [
+              {
+                "quality": "saludable",
+                "foods": [
+                  {"name": "Dientes de ajo", "measure": "8 unidades"}
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Azúcar",
+        "subgroups": [
+          {
+            "portion": {"calories": 20, "protein": 0, "carbs": 5, "fat": 0},
+            "blocks": [
+              {
+                "quality": "igAlto",
+                "foods": [
+                  {"name": "Azúcar", "measure": "1 cucharadita", "grams": 5}
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
