@@ -103,8 +103,17 @@ jobs:
         env:
           VERSION: ${{ steps.version.outputs.version }}
         run: |
-          # La sección "## <versión>" de CAMBIOS.md, hasta la siguiente.
-          awk -v v="## $VERSION" '$0 == v {on=1; next} /^## / {on=0} on' CAMBIOS.md > notas.md
+          # La sección "## <versión>" de CAMBIOS.md, hasta la siguiente, con
+          # cada punto en una sola línea: la app muestra el texto tal cual y
+          # los saltos del archivo lo dejarían cortado.
+          awk -v v="## $VERSION" '
+            $0 == v {on=1; next}
+            /^## / {on=0}
+            !on {next}
+            /^  +[^ ]/ {sub(/^ +/, ""); linea = linea " " $0; next}
+            {if (linea != "") print linea; linea = $0}
+            END {if (linea != "") print linea}
+          ' CAMBIOS.md | sed '/./,$!d' > notas.md
           {
             echo
             echo "Para instalar o actualizar: descarga AliFit.apk desde el teléfono y ábrelo."
