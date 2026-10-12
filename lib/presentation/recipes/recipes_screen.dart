@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../core/text/portion_format.dart';
+
 import '../../core/text/text_normalize.dart';
 import '../../domain/recipes/recipe.dart';
 import '../../domain/recipes/recipe_providers.dart';
@@ -157,7 +159,7 @@ class _RecipesScreenState extends ConsumerState<RecipesScreen> {
                                 title: Text(recipe.name),
                                 subtitle: Text(
                                   '${perServing.calories.round()} kcal/porción · '
-                                  '${recipe.servings} porciones'
+                                  '${formatPortions(recipe.servings)}'
                                   '${recipe.prepMinutes != null ? ' · ${recipe.prepMinutes} min' : ''}',
                                 ),
                                 trailing: recipe.isFavorite

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../core/text/portion_format.dart';
+
 import '../../domain/inventory/inventory_providers.dart';
 import '../../domain/recipes/recipe_providers.dart';
 import '../../domain/recipes/what_can_i_make_engine.dart';
@@ -92,7 +94,7 @@ class _MatchCard extends StatelessWidget {
               const SizedBox(height: 4),
               Text(
                 '${perServing.calories.round()} kcal/porción · '
-                '${recipe.servings} porciones'
+                '${formatPortions(recipe.servings)}'
                 '${recipe.prepMinutes != null ? ' · ${recipe.prepMinutes} min' : ''}',
                 style: Theme.of(context).textTheme.bodySmall,
               ),

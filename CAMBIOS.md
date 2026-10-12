@@ -3,6 +3,16 @@
 Cada sección se publica como notas de la versión y la app la muestra al
 avisar que hay una actualización.
 
+## 1.3.0
+
+- Las recetas se registran en el Diario como un solo ítem (ej. "Waffle
+  casero · 1 porción · 93 kcal"), no ingrediente por ingrediente. Al
+  tocarlo se ven los ingredientes, y con la X se quita completo.
+- Al registrar una receta se elige cuántas porciones se comieron (de media
+  en media). Antes se anotaba la receta entera aunque rindiera varias
+  porciones.
+- "1 porción" ya no aparece como "1 porciones".
+
 ## 1.2.0
 
 - "Mi plan de comidas": si tu archivo de perfil trae el plan de tu

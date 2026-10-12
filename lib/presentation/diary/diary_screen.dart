@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
 import '../../core/text/decimal_format.dart';
+import '../../core/text/portion_format.dart';
 import '../../domain/meal_plan/meal_plan_providers.dart';
 import '../../domain/nutrition/meal.dart';
 import '../../domain/nutrition/meal_type.dart';
@@ -259,6 +260,41 @@ class _MealBox extends ConsumerWidget {
     }
   }
 
+  static String _quantityText(MealItem item) =>
+      '${item.quantity.toStringAsFixed(item.quantity == item.quantity.roundToDouble() ? 0 : 1)} '
+      '${item.unitLabel}';
+
+  void _showRecipeItems(
+    BuildContext context,
+    MealRecipeEntry entry,
+    List<MealItem> items,
+  ) {
+    showModalBottomSheet<void>(
+      context: context,
+      builder: (context) => SafeArea(
+        child: ListView(
+          shrinkWrap: true,
+          children: [
+            ListTile(
+              title: Text(entry.name),
+              subtitle: Text(formatPortions(entry.portions)),
+            ),
+            const Divider(height: 1),
+            for (final item in items)
+              ListTile(
+                dense: true,
+                title: Text(item.food.name),
+                subtitle: Text(
+                  '${_quantityText(item)} · '
+                  '${item.nutrition.calories.round()} kcal',
+                ),
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final items = meal?.items ?? const [];
@@ -340,22 +376,43 @@ class _MealBox extends ConsumerWidget {
               ),
             if (items.isNotEmpty) ...[
               const Divider(height: 12),
-              ...items.map(
-                (item) => ListTile(
-                  contentPadding: EdgeInsets.zero,
-                  dense: true,
-                  title: Text(item.food.name),
-                  subtitle: Text(
-                    '${item.quantity.toStringAsFixed(item.quantity == item.quantity.roundToDouble() ? 0 : 1)} '
-                    '${item.unitLabel} · ${item.nutrition.calories.round()} kcal',
+              for (final line in meal!.lines)
+                switch (line) {
+                  FoodLine(:final item) => ListTile(
+                    contentPadding: EdgeInsets.zero,
+                    dense: true,
+                    title: Text(item.food.name),
+                    subtitle: Text(
+                      '${_quantityText(item)} · '
+                      '${item.nutrition.calories.round()} kcal',
+                    ),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.close, size: 18),
+                      onPressed: () =>
+                          ref.read(mealRepositoryProvider).removeItem(item.id),
+                    ),
                   ),
-                  trailing: IconButton(
-                    icon: const Icon(Icons.close, size: 18),
-                    onPressed: () =>
-                        ref.read(mealRepositoryProvider).removeItem(item.id),
+                  // Una receta se ve como un solo ítem; al tocarla se
+                  // muestran los ingredientes que se anotaron.
+                  RecipeLine(:final entry, :final items) => ListTile(
+                    contentPadding: EdgeInsets.zero,
+                    dense: true,
+                    leading: const Icon(Icons.menu_book_outlined, size: 20),
+                    minLeadingWidth: 0,
+                    title: Text(entry.name),
+                    subtitle: Text(
+                      '${formatPortions(entry.portions)} · '
+                      '${line.nutrition.calories.round()} kcal',
+                    ),
+                    onTap: () => _showRecipeItems(context, entry, items),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.close, size: 18),
+                      onPressed: () => ref
+                          .read(mealRepositoryProvider)
+                          .removeRecipeEntry(entry.id),
+                    ),
                   ),
-                ),
-              ),
+                },
             ],
             const SizedBox(height: 4),
             SizedBox(

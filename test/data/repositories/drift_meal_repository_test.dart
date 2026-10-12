@@ -4,6 +4,8 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:alifit/data/database/app_database.dart';
 import 'package:alifit/data/repositories/drift_meal_repository.dart';
+import 'package:alifit/domain/nutrition/meal.dart';
+import 'package:alifit/domain/nutrition/meal_repository.dart';
 import 'package:alifit/domain/nutrition/meal_type.dart';
 
 void main() {
@@ -173,6 +175,122 @@ void main() {
     expect(totals.last, closeTo(260, 0.01));
 
     await sub.cancel();
+  });
+
+  group('recetas registradas', () {
+    final day = DateTime(2026, 10, 12);
+
+    MealRecipeItemInput ingredient(double grams) => MealRecipeItemInput(
+      foodId: foodId,
+      quantity: grams,
+      unitLabel: 'g',
+      gramsEquivalent: grams,
+    );
+
+    Future<void> addWaffle({double portions = 1}) => repo.addRecipe(
+      date: day,
+      type: MealType.desayuno,
+      recipeId: 7,
+      recipeName: 'Waffle casero',
+      portions: portions,
+      items: [ingredient(19 * portions), ingredient(36 * portions)],
+    );
+
+    Future<Meal> breakfast([DateTime? date]) async =>
+        (await repo.watchMealsForDate(date ?? day).first).single;
+
+    test('una receta queda como una sola línea con sus calorías sumadas, '
+        'junto a los alimentos sueltos', () async {
+      await repo.addItem(
+        date: day,
+        type: MealType.desayuno,
+        foodId: foodId,
+        quantity: 100,
+        unitLabel: 'g',
+        gramsEquivalent: 100,
+      );
+      await addWaffle();
+
+      final meal = await breakfast();
+      expect(meal.items, hasLength(3));
+      expect(meal.lines, hasLength(2));
+      expect(meal.lines.first, isA<FoodLine>());
+
+      final recipe = meal.lines.last as RecipeLine;
+      expect(recipe.entry.name, 'Waffle casero');
+      expect(recipe.entry.portions, 1);
+      expect(recipe.entry.recipeId, 7);
+      expect(recipe.items, hasLength(2));
+      // 55 g de arroz (130 kcal/100 g).
+      expect(recipe.nutrition.calories, closeTo(71.5, 0.01));
+      expect(meal.totals.calories, closeTo(201.5, 0.01));
+    });
+
+    test(
+      'la misma receta registrada dos veces son dos líneas distintas',
+      () async {
+        await addWaffle();
+        await addWaffle(portions: 2);
+
+        final lines = (await breakfast()).lines.cast<RecipeLine>();
+        expect(lines.map((l) => l.entry.portions), [1, 2]);
+        expect(lines.last.nutrition.calories, closeTo(143, 0.01));
+      },
+    );
+
+    test(
+      'removeRecipeEntry quita la receta completa y avisa a la pantalla',
+      () async {
+        await addWaffle();
+        await addWaffle(portions: 2);
+        final lineCounts = <int>[];
+        final sub = repo
+            .watchMealsForDate(day)
+            .listen((meals) => lineCounts.add(meals.single.lines.length));
+        await pumpEventQueue(times: 50);
+        expect(lineCounts.last, 2);
+
+        final first = (await breakfast()).lines.first as RecipeLine;
+        await repo.removeRecipeEntry(first.entry.id);
+        await pumpEventQueue(times: 50);
+
+        expect(lineCounts.last, 1);
+        final meal = await breakfast();
+        expect(meal.items, hasLength(2));
+        expect(meal.recipeEntries.single.portions, 2);
+        await sub.cancel();
+      },
+    );
+
+    test('duplicateMeal copia la receta como receta, no como ingredientes '
+        'sueltos', () async {
+      await addWaffle(portions: 2);
+      final target = DateTime(2026, 10, 13);
+
+      await repo.duplicateMeal(
+        mealId: (await breakfast()).id,
+        targetDate: target,
+      );
+
+      final copy = (await breakfast(target)).lines.single as RecipeLine;
+      expect(copy.entry.name, 'Waffle casero');
+      expect(copy.entry.portions, 2);
+      expect(copy.items, hasLength(2));
+      // La original sigue intacta y son registros independientes.
+      final original = (await breakfast()).lines.single as RecipeLine;
+      expect(original.entry.id, isNot(copy.entry.id));
+    });
+
+    test('clearMeal también quita las recetas registradas', () async {
+      await addWaffle();
+      final meal = await breakfast();
+
+      await repo.clearMeal(meal.id);
+
+      final cleared = await breakfast();
+      expect(cleared.items, isEmpty);
+      expect(cleared.recipeEntries, isEmpty);
+    });
   });
 
   test('clearMeal deja la comida sin alimentos', () async {

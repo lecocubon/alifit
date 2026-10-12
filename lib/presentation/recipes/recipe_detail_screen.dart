@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../core/text/portion_format.dart';
+import '../../domain/nutrition/meal_repository.dart';
 import '../../domain/nutrition/meal_type.dart';
 import '../../domain/nutrition/nutrition_providers.dart';
 import '../../domain/recipes/recipe.dart';
@@ -17,43 +19,44 @@ class RecipeDetailScreen extends ConsumerWidget {
     WidgetRef ref,
     Recipe recipe,
   ) async {
-    final mealType = await showModalBottomSheet<MealType>(
+    final choice = await showModalBottomSheet<(MealType, double)>(
       context: context,
-      builder: (context) => SafeArea(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: MealType.values
+      isScrollControlled: true,
+      builder: (context) => _RegisterSheet(recipe: recipe),
+    );
+    if (choice == null || !context.mounted) {
+      return;
+    }
+    final (mealType, portions) = choice;
+
+    await ref
+        .read(mealRepositoryProvider)
+        .addRecipe(
+          date: ref.read(selectedDiaryDateProvider),
+          type: mealType,
+          recipeId: recipe.id,
+          recipeName: recipe.name,
+          portions: portions,
+          items: recipe
+              .ingredientsFor(portions)
               .map(
-                (type) => ListTile(
-                  title: Text(type.label),
-                  onTap: () => Navigator.of(context).pop(type),
+                (i) => MealRecipeItemInput(
+                  foodId: i.food.id,
+                  quantity: i.quantity,
+                  unitLabel: i.unitLabel,
+                  gramsEquivalent: i.gramsEquivalent,
                 ),
               )
               .toList(),
-        ),
-      ),
-    );
-    if (mealType == null || !context.mounted) {
-      return;
-    }
-
-    final date = ref.read(selectedDiaryDateProvider);
-    final mealRepo = ref.read(mealRepositoryProvider);
-    for (final ingredient in recipe.ingredients) {
-      await mealRepo.addItem(
-        date: date,
-        type: mealType,
-        foodId: ingredient.food.id,
-        quantity: ingredient.quantity,
-        unitLabel: ingredient.unitLabel,
-        gramsEquivalent: ingredient.gramsEquivalent,
-      );
-    }
+        );
 
     if (context.mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('${recipe.name} registrada en ${mealType.label}.'),
+          content: Text(
+            '${recipe.name} (${formatPortions(portions)}) registrada en '
+            '${mealType.label}.',
+          ),
         ),
       );
     }
@@ -131,7 +134,7 @@ class RecipeDetailScreen extends ConsumerWidget {
                     Wrap(
                       spacing: 16,
                       children: [
-                        Text('${recipe.servings} porciones'),
+                        Text(formatPortions(recipe.servings)),
                         if (recipe.prepMinutes != null)
                           Text('${recipe.prepMinutes} min'),
                         if (recipe.costEstimate != null)
@@ -224,6 +227,64 @@ class RecipeDetailScreen extends ConsumerWidget {
         },
         loading: () => const Center(child: CircularProgressIndicator()),
         error: (error, _) => Center(child: Text('Error: $error')),
+      ),
+    );
+  }
+}
+
+/// Hoja para elegir cuántas porciones se comieron y en qué comida anotarlas.
+class _RegisterSheet extends StatefulWidget {
+  const _RegisterSheet({required this.recipe});
+
+  final Recipe recipe;
+
+  @override
+  State<_RegisterSheet> createState() => _RegisterSheetState();
+}
+
+class _RegisterSheetState extends State<_RegisterSheet> {
+  static const _step = 0.5;
+  double _portions = 1;
+
+  @override
+  Widget build(BuildContext context) {
+    final kcal = widget.recipe.nutritionPerServing.calories * _portions;
+    return SafeArea(
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ListTile(
+              title: const Text('¿Cuántas porciones?'),
+              subtitle: Text(
+                '${formatPortions(_portions)} · ${kcal.round()} kcal',
+              ),
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  IconButton(
+                    tooltip: 'Menos',
+                    icon: const Icon(Icons.remove_circle_outline),
+                    onPressed: _portions > _step
+                        ? () => setState(() => _portions -= _step)
+                        : null,
+                  ),
+                  IconButton(
+                    tooltip: 'Más',
+                    icon: const Icon(Icons.add_circle_outline),
+                    onPressed: () => setState(() => _portions += _step),
+                  ),
+                ],
+              ),
+            ),
+            const Divider(height: 1),
+            for (final type in MealType.values)
+              ListTile(
+                title: Text(type.label),
+                onTap: () => Navigator.of(context).pop((type, _portions)),
+              ),
+          ],
+        ),
       ),
     );
   }

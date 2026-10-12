@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../core/text/portion_format.dart';
 import '../../domain/nutrition/food.dart';
+import '../../domain/nutrition/meal_repository.dart';
 import '../../domain/nutrition/meal_type.dart';
 import '../../domain/nutrition/nutrition_providers.dart';
 import '../../domain/nutrition/nutrition_values.dart';
@@ -16,9 +18,7 @@ class _EditableIngredient {
     required this.unitLabel,
     required this.gramsPerUnit,
   }) : quantityController = TextEditingController(
-         text: quantity == quantity.roundToDouble()
-             ? quantity.toStringAsFixed(0)
-             : quantity.toStringAsFixed(1),
+         text: formatDecimalEs(quantity),
        );
 
   final Food food;
@@ -36,8 +36,10 @@ class _EditableIngredient {
       food.nutritionPer100.scaledToGrams(gramsEquivalent);
 }
 
-/// Permite agregar una receta al diario, editando o quitando ingredientes
-/// solo para este registro puntual (la receta original no se modifica).
+/// Permite agregar una receta al diario eligiendo cuántas porciones se
+/// comieron, y editando o quitando ingredientes solo para este registro
+/// puntual (la receta original no se modifica). En el Diario queda como un
+/// solo ítem con el nombre de la receta.
 class AddRecipeToMealScreen extends ConsumerStatefulWidget {
   const AddRecipeToMealScreen({
     super.key,
@@ -56,24 +58,41 @@ class AddRecipeToMealScreen extends ConsumerStatefulWidget {
 }
 
 class _AddRecipeToMealScreenState extends ConsumerState<AddRecipeToMealScreen> {
+  static const _portionStep = 0.5;
+
   late List<_EditableIngredient> _ingredients;
+  double _portions = 1;
   bool _saving = false;
 
   @override
   void initState() {
     super.initState();
-    _ingredients = widget.recipe.ingredients
-        .map(
-          (ingredient) => _EditableIngredient(
-            food: ingredient.food,
-            quantity: ingredient.quantity,
-            unitLabel: ingredient.unitLabel,
-            gramsPerUnit: ingredient.quantity > 0
-                ? ingredient.gramsEquivalent / ingredient.quantity
-                : 0,
-          ),
-        )
-        .toList();
+    _ingredients = _ingredientsForPortions();
+  }
+
+  List<_EditableIngredient> _ingredientsForPortions() => widget.recipe
+      .ingredientsFor(_portions, includeOptional: true)
+      .map(
+        (ingredient) => _EditableIngredient(
+          food: ingredient.food,
+          quantity: ingredient.quantity,
+          unitLabel: ingredient.unitLabel,
+          gramsPerUnit: ingredient.quantity > 0
+              ? ingredient.gramsEquivalent / ingredient.quantity
+              : 0,
+        ),
+      )
+      .toList();
+
+  /// Cambiar las porciones recalcula todas las cantidades desde la receta.
+  void _setPortions(double portions) {
+    setState(() {
+      for (final ingredient in _ingredients) {
+        ingredient.quantityController.dispose();
+      }
+      _portions = portions;
+      _ingredients = _ingredientsForPortions();
+    });
   }
 
   @override
@@ -128,20 +147,26 @@ class _AddRecipeToMealScreenState extends ConsumerState<AddRecipeToMealScreen> {
       return;
     }
     setState(() => _saving = true);
-    final repository = ref.read(mealRepositoryProvider);
-    for (final ingredient in _ingredients) {
-      if (ingredient.quantity <= 0) {
-        continue;
-      }
-      await repository.addItem(
-        date: widget.date,
-        type: widget.mealType,
-        foodId: ingredient.food.id,
-        quantity: ingredient.quantity,
-        unitLabel: ingredient.unitLabel,
-        gramsEquivalent: ingredient.gramsEquivalent,
-      );
-    }
+    await ref
+        .read(mealRepositoryProvider)
+        .addRecipe(
+          date: widget.date,
+          type: widget.mealType,
+          recipeId: widget.recipe.id,
+          recipeName: widget.recipe.name,
+          portions: _portions,
+          items: _ingredients
+              .where((ingredient) => ingredient.quantity > 0)
+              .map(
+                (ingredient) => MealRecipeItemInput(
+                  foodId: ingredient.food.id,
+                  quantity: ingredient.quantity,
+                  unitLabel: ingredient.unitLabel,
+                  gramsEquivalent: ingredient.gramsEquivalent,
+                ),
+              )
+              .toList(),
+        );
     if (mounted) {
       Navigator.of(context).pop(true);
     }
@@ -155,8 +180,32 @@ class _AddRecipeToMealScreenState extends ConsumerState<AddRecipeToMealScreen> {
       body: SafeArea(
         child: Column(
           children: [
+            ListTile(
+              title: const Text('¿Cuántas porciones?'),
+              subtitle: Text(
+                '${formatPortions(_portions)} de '
+                '${formatPortions(widget.recipe.servings)} de la receta',
+              ),
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  IconButton(
+                    tooltip: 'Menos',
+                    icon: const Icon(Icons.remove_circle_outline),
+                    onPressed: _portions > _portionStep
+                        ? () => _setPortions(_portions - _portionStep)
+                        : null,
+                  ),
+                  IconButton(
+                    tooltip: 'Más',
+                    icon: const Icon(Icons.add_circle_outline),
+                    onPressed: () => _setPortions(_portions + _portionStep),
+                  ),
+                ],
+              ),
+            ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
               child: Text(
                 'Ajusta o quita lo que no corresponda antes de agregarlo a '
                 '${widget.mealType.label.toLowerCase()}. Esto no cambia la '

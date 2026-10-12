@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../core/text/portion_format.dart';
+
 import '../../domain/nutrition/food.dart';
 import '../../domain/nutrition/food_source.dart';
 import '../../domain/nutrition/meal_type.dart';
@@ -238,7 +240,7 @@ class _RecipeTabState extends ConsumerState<_RecipeTab> {
                     title: Text(recipe.name),
                     subtitle: Text(
                       '${recipe.nutritionPerServing.calories.round()} kcal '
-                      'por porción · ${recipe.servings} porciones',
+                      'por porción · ${formatPortions(recipe.servings)}',
                     ),
                     onTap: () => widget.onSelect(recipe),
                   );

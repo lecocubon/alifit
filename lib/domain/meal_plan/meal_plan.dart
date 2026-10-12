@@ -1,4 +1,5 @@
 import '../../core/text/decimal_format.dart';
+import '../../core/text/portion_format.dart';
 import '../nutri_guide/nutri_guide.dart' show PortionMacros;
 import '../nutrition/meal_type.dart';
 
@@ -23,8 +24,7 @@ class PlannedPortion {
   final String? equivalents;
 
   /// Ej.: "1 porción", "0,5 porciones".
-  String get amountText =>
-      '${formatDecimalEs(amount)} ${amount == 1 ? 'porción' : 'porciones'}';
+  String get amountText => formatPortions(amount);
 }
 
 class PlannedMeal {

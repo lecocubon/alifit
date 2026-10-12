@@ -48,6 +48,7 @@ class AppSettings extends Table {
     FoodAliases,
     FoodServings,
     Meals,
+    MealRecipeEntries,
     MealItems,
     GlucoseEntries,
     WeightEntries,
@@ -67,7 +68,7 @@ class AppDatabase extends _$AppDatabase {
     : super(executor ?? driftDatabase(name: 'alifit'));
 
   @override
-  int get schemaVersion => 11;
+  int get schemaVersion => 12;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -114,6 +115,10 @@ class AppDatabase extends _$AppDatabase {
         await m.createTable(activityEntries);
         await m.createTable(waterLogs);
         await m.createTable(dailyNotes);
+      }
+      if (from < 12) {
+        await m.createTable(mealRecipeEntries);
+        await m.addColumn(mealItems, mealItems.recipeEntryId);
       }
     },
   );
