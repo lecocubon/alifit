@@ -289,6 +289,7 @@ class _RecipeFormScreenState extends ConsumerState<RecipeFormScreen> {
                 else
                   ..._ingredients.map(
                     (draft) => _IngredientRow(
+                      key: ObjectKey(draft),
                       draft: draft,
                       onQuantityChanged: (q) => _updateQuantity(draft, q),
                       onUnitChanged: (unit) => setState(() {
@@ -345,6 +346,7 @@ class _RecipeFormScreenState extends ConsumerState<RecipeFormScreen> {
 
 class _IngredientRow extends StatelessWidget {
   const _IngredientRow({
+    super.key,
     required this.draft,
     required this.onQuantityChanged,
     required this.onUnitChanged,
