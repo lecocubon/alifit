@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
+import '../../core/time/calendar_days.dart';
 import '../../domain/inventory/inventory_providers.dart';
 import '../../domain/menus/menu_generator.dart';
 import '../../domain/menus/menu_meal.dart';
@@ -192,10 +193,7 @@ class MenuPlanDetailScreen extends ConsumerWidget {
         menuMealsProvider(menuPlanId).future,
       );
 
-      final days = List.generate(
-        7,
-        (i) => plan.startDate.add(Duration(days: i)),
-      );
+      final days = List.generate(7, (i) => addDays(plan.startDate, i));
       final alreadyFilled = existingMeals
           .map((m) => (date: m.date, mealType: m.mealType))
           .toSet();
@@ -278,7 +276,7 @@ class MenuPlanDetailScreen extends ConsumerWidget {
                 }
                 final days = List.generate(
                   7,
-                  (i) => plan.startDate.add(Duration(days: i)),
+                  (i) => addDays(plan.startDate, i),
                 );
                 return ListView.builder(
                   padding: const EdgeInsets.all(16),

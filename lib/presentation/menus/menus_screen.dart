@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
+import '../../core/time/calendar_days.dart';
 import '../../domain/menus/menu_plan.dart';
 import '../../domain/menus/menu_providers.dart';
 import 'menu_plan_detail_screen.dart';
@@ -13,9 +14,7 @@ class MenusScreen extends ConsumerWidget {
     final today = DateTime.now();
     final todayDateOnly = DateTime(today.year, today.month, today.day);
     final daysUntilMonday = (DateTime.monday - todayDateOnly.weekday + 7) % 7;
-    return todayDateOnly.add(
-      Duration(days: daysUntilMonday == 0 ? 7 : daysUntilMonday),
-    );
+    return addDays(todayDateOnly, daysUntilMonday == 0 ? 7 : daysUntilMonday);
   }
 
   Future<void> _createPlan(BuildContext context, WidgetRef ref) async {

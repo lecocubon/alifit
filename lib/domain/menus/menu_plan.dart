@@ -1,3 +1,5 @@
+import '../../core/time/calendar_days.dart';
+
 class MenuPlan {
   const MenuPlan({
     required this.id,
@@ -11,5 +13,5 @@ class MenuPlan {
   final DateTime startDate;
   final DateTime createdAt;
 
-  DateTime get endDate => startDate.add(const Duration(days: 6));
+  DateTime get endDate => addDays(startDate, 6);
 }

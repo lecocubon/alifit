@@ -1,5 +1,6 @@
 import 'package:drift/drift.dart';
 
+import '../../core/time/calendar_days.dart';
 import '../../domain/nutrition/daily_nutrition_total.dart';
 import '../../domain/nutrition/food.dart';
 import '../../domain/nutrition/food_source.dart';
@@ -353,7 +354,7 @@ class DriftMealRepository implements MealRepository {
         }
       }
       results.add(DailyNutritionTotal(date: day, totals: totals));
-      day = _dateOnly(day.add(const Duration(days: 1)));
+      day = addDays(day, 1);
     }
     return results;
   }

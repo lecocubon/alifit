@@ -136,4 +136,36 @@ void main() {
 
     expect(product.inconsistencyWarning, isNotNull);
   });
+
+  test('acepta nutrientes que vienen como texto o vacíos', () async {
+    final client = HttpOffClient(
+      client: MockClient((request) async {
+        return _jsonResponse({
+          'status': 1,
+          'product': {
+            'product_name': 'Galletas',
+            'brands': 12345,
+            'nutriments': {
+              'energy-kcal_100g': '450',
+              'carbohydrates_100g': '68,5',
+              'proteins_100g': 7,
+              'fat_100g': '',
+              'fiber_100g': null,
+              'sugars_100g': '30.2',
+              'sodium_100g': '0.4',
+            },
+          },
+        });
+      }),
+    );
+
+    final product = await client.fetchProduct('111');
+
+    expect(product.nutritionPer100.calories, 450);
+    expect(product.nutritionPer100.carbs, 68.5);
+    expect(product.nutritionPer100.sugar, 30.2);
+    expect(product.nutritionPer100.sodium, closeTo(400, 0.001));
+    expect(product.brand, isNull);
+    expect(product.missingFields, containsAll(['grasas', 'fibra']));
+  });
 }

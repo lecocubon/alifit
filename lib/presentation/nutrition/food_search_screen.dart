@@ -90,10 +90,17 @@ class _FoodSearchScreenState extends ConsumerState<FoodSearchScreen>
     }
   }
 
+  /// El alimento recién creado queda elegido de inmediato: no hay que
+  /// volver a buscarlo.
   Future<void> _createNewFood() async {
-    await Navigator.of(
+    final food = await Navigator.of(
       context,
-    ).push(MaterialPageRoute(builder: (_) => const FoodFormScreen()));
+    ).push<Food>(MaterialPageRoute(builder: (_) => const FoodFormScreen()));
+    if (food == null || !mounted) {
+      return;
+    }
+    ref.invalidate(foodSearchResultsProvider);
+    await _selectFood(food);
   }
 
   Future<void> _scanBarcode() async {

@@ -69,6 +69,25 @@ void main() {
     expect(found!.name, 'Producto envasado');
   });
 
+  test('getByBarcode no falla si dos alimentos tienen el mismo código: '
+      'usa el más reciente', () async {
+    await repo.createFood(
+      name: 'Leche (Open Food Facts)',
+      nutritionPer100: nutrition,
+      baseUnit: 'g',
+      barcode: '7800000000009',
+    );
+    await repo.createFood(
+      name: 'Leche (creada a mano)',
+      nutritionPer100: nutrition,
+      baseUnit: 'g',
+      barcode: '7800000000009',
+    );
+
+    final found = await repo.getByBarcode('7800000000009');
+    expect(found!.name, 'Leche (creada a mano)');
+  });
+
   test('getByBarcode retorna null si no hay coincidencia', () async {
     final found = await repo.getByBarcode('0000000000000');
     expect(found, isNull);

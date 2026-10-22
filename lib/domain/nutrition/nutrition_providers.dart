@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../app/providers/database_provider.dart';
+import '../../core/time/calendar_days.dart';
 import '../../data/repositories/drift_activity_repository.dart';
 import '../../data/repositories/drift_daily_note_repository.dart';
 import '../../data/repositories/drift_food_repository.dart';
@@ -67,12 +68,45 @@ final foodSearchResultsProvider = FutureProvider<List<Food>>((ref) async {
   return ref.read(foodRepositoryProvider).search(query);
 });
 
+/// Reloj de la app; se reemplaza en los tests.
+final clockProvider = Provider<DateTime Function()>((ref) => DateTime.now);
+
+/// La fecha de hoy, sin hora. La app la vuelve a calcular al volver a
+/// primer plano ([TodayNotifier.refresh]): si quedó abierta de un día para
+/// otro, Inicio y el Diario no siguen mostrando el día anterior.
+class TodayNotifier extends Notifier<DateTime> {
+  @override
+  DateTime build() => _today();
+
+  DateTime _today() {
+    final now = ref.read(clockProvider)();
+    return DateTime(now.year, now.month, now.day);
+  }
+
+  void refresh() {
+    final today = _today();
+    if (today != state) {
+      state = today;
+    }
+  }
+}
+
+final todayProvider = NotifierProvider<TodayNotifier, DateTime>(
+  TodayNotifier.new,
+);
+
 /// Fecha seleccionada para el Diario (por defecto, hoy).
 class SelectedDiaryDateNotifier extends Notifier<DateTime> {
   @override
   DateTime build() {
-    final now = DateTime.now();
-    return DateTime(now.year, now.month, now.day);
+    // Si el Diario estaba en hoy y cambia el día, pasa al nuevo hoy; si se
+    // eligió otra fecha, se respeta.
+    ref.listen(todayProvider, (previous, next) {
+      if (state == previous) {
+        state = next;
+      }
+    });
+    return ref.read(todayProvider);
   }
 
   void setDate(DateTime date) =>
@@ -89,34 +123,38 @@ final mealsForSelectedDateProvider = StreamProvider<List<Meal>>((ref) {
   return ref.watch(mealRepositoryProvider).watchMealsForDate(date);
 });
 
+/// Comidas de un día cualquiera (Inicio usa hoy aunque el Diario esté en
+/// otra fecha).
+final mealsForDateProvider = StreamProvider.family<List<Meal>, DateTime>((
+  ref,
+  date,
+) {
+  final day = DateTime(date.year, date.month, date.day);
+  return ref.watch(mealRepositoryProvider).watchMealsForDate(day);
+});
+
 /// Totales diarios de los últimos 14 días (incluyendo hoy), para el
 /// gráfico de tendencia de alimentación.
 final nutritionTrendProvider = FutureProvider<List<DailyNutritionTotal>>((ref) {
-  // Se recalcula cuando cambian las comidas del día seleccionado (para que
-  // se refleje de inmediato al agregar o quitar algo hoy).
+  final today = ref.watch(todayProvider);
+  // Se recalcula cuando cambian las comidas de hoy o del día seleccionado
+  // en el Diario.
+  ref.watch(mealsForDateProvider(today));
   ref.watch(mealsForSelectedDateProvider);
-  final today = DateTime.now();
-  final start = DateTime(
-    today.year,
-    today.month,
-    today.day,
-  ).subtract(const Duration(days: 13));
   return ref
       .watch(mealRepositoryProvider)
-      .getDailyTotals(startDate: start, endDate: today);
+      .getDailyTotals(startDate: addDays(today, -13), endDate: today);
 });
 
 /// Días consecutivos con al menos una comida registrada (sin contar en
 /// contra el día de hoy si todavía no se ha registrado nada).
 final loggingStreakProvider = FutureProvider<int>((ref) async {
-  // Se recalcula cuando cambian las comidas del día seleccionado.
+  final today = ref.watch(todayProvider);
+  ref.watch(mealsForDateProvider(today));
   ref.watch(mealsForSelectedDateProvider);
-  final today = DateTime.now();
-  final todayOnly = DateTime(today.year, today.month, today.day);
-  final start = todayOnly.subtract(const Duration(days: 60));
   final totals = await ref
       .watch(mealRepositoryProvider)
-      .getDailyTotals(startDate: start, endDate: todayOnly);
+      .getDailyTotals(startDate: addDays(today, -60), endDate: today);
 
   var index = totals.length - 1;
   if (index >= 0 && totals[index].totals.calories <= 0) {

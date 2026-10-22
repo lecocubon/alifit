@@ -332,4 +332,31 @@ void main() {
     expect(totals[1].totals.calories, closeTo(260, 0.01));
     expect(totals[2].totals.calories, 0);
   });
+
+  // Con la hora de Chile, sumar 24 horas al sábado 3 de abril de 2027 (que
+  // dura 25) daba otra vez el sábado y el ciclo no terminaba nunca: la
+  // racha de Inicio se quedaba calculando del 4 de abril a comienzos de
+  // junio.
+  test(
+    'getDailyTotals termina y cuenta cada día en un rango con cambio de hora',
+    () async {
+      await repo.addItem(
+        date: DateTime(2027, 4, 4),
+        type: MealType.almuerzo,
+        foodId: foodId,
+        quantity: 100,
+        unitLabel: 'g',
+        gramsEquivalent: 100,
+      );
+
+      final totals = await repo.getDailyTotals(
+        startDate: DateTime(2027, 4, 1),
+        endDate: DateTime(2027, 4, 6),
+      );
+
+      expect(totals.map((t) => t.date.day), [1, 2, 3, 4, 5, 6]);
+      expect(totals[3].totals.calories, closeTo(130, 0.01));
+    },
+    timeout: const Timeout(Duration(seconds: 10)),
+  );
 }

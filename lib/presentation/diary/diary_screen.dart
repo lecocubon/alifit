@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 
 import '../../core/text/decimal_format.dart';
 import '../../core/text/portion_format.dart';
+import '../../core/time/calendar_days.dart';
 import '../../domain/meal_plan/meal_plan_providers.dart';
 import '../../domain/nutrition/meal.dart';
 import '../../domain/nutrition/meal_type.dart';
@@ -31,11 +32,21 @@ class DiaryScreen extends ConsumerWidget {
 
   Future<void> _copyFromAnotherDay(BuildContext context, WidgetRef ref) async {
     final targetDate = ref.read(selectedDiaryDateProvider);
+    final today = ref.read(todayProvider);
+    final firstDate = addDays(today, -365);
+    // El día anterior al que se está viendo, dentro del rango del
+    // calendario (el Diario puede estar en una fecha futura o muy antigua).
+    var initialDate = addDays(targetDate, -1);
+    if (initialDate.isAfter(today)) {
+      initialDate = today;
+    } else if (initialDate.isBefore(firstDate)) {
+      initialDate = firstDate;
+    }
     final sourceDate = await showDatePicker(
       context: context,
-      initialDate: targetDate.subtract(const Duration(days: 1)),
-      firstDate: DateTime.now().subtract(const Duration(days: 365)),
-      lastDate: DateTime.now(),
+      initialDate: initialDate,
+      firstDate: firstDate,
+      lastDate: today,
       helpText: 'Copiar comidas de qué día',
     );
     if (sourceDate == null || !context.mounted) {
@@ -72,15 +83,17 @@ class DiaryScreen extends ConsumerWidget {
           ),
           IconButton(
             icon: const Icon(Icons.chevron_left),
+            tooltip: 'Día anterior',
             onPressed: () => ref
                 .read(selectedDiaryDateProvider.notifier)
-                .setDate(date.subtract(const Duration(days: 1))),
+                .setDate(addDays(date, -1)),
           ),
           IconButton(
             icon: const Icon(Icons.chevron_right),
+            tooltip: 'Día siguiente',
             onPressed: () => ref
                 .read(selectedDiaryDateProvider.notifier)
-                .setDate(date.add(const Duration(days: 1))),
+                .setDate(addDays(date, 1)),
           ),
         ],
       ),

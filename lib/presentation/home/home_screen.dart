@@ -24,24 +24,20 @@ import '../updates/update_widgets.dart';
 import '../weight/body_metrics_screen.dart';
 import '../weight/weight_screen.dart';
 
-DateTime _todayOnly() {
-  final now = DateTime.now();
-  return DateTime(now.year, now.month, now.day);
-}
-
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final today = ref.watch(todayProvider);
     final profileAsync = ref.watch(activeProfileProvider);
-    final mealsAsync = ref.watch(mealsForSelectedDateProvider);
+    // Siempre hoy, aunque el Diario esté mostrando otro día.
+    final mealsAsync = ref.watch(mealsForDateProvider(today));
     final glucoseAsync = ref.watch(glucoseEntriesProvider);
     final goalsAsync = ref.watch(nutritionGoalsProvider);
     // La guía es parte del perfil personal: sin guía importada no hay acceso.
     final hasNutriGuide = ref.watch(nutriGuideProvider).value != null;
     final hasMealPlan = ref.watch(mealPlanProvider).value != null;
-    final today = _todayOnly();
 
     return Scaffold(
       appBar: AppBar(

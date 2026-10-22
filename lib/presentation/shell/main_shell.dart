@@ -1,20 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../domain/nutrition/nutrition_providers.dart';
 import '../diary/diary_screen.dart';
 import '../glucose/glucose_screen.dart';
 import '../home/home_screen.dart';
 import '../menus/menus_screen.dart';
 import '../settings/settings_screen.dart';
 
-class MainShell extends StatefulWidget {
+class MainShell extends ConsumerStatefulWidget {
   const MainShell({super.key});
 
   @override
-  State<MainShell> createState() => _MainShellState();
+  ConsumerState<MainShell> createState() => _MainShellState();
 }
 
-class _MainShellState extends State<MainShell> {
+class _MainShellState extends ConsumerState<MainShell> {
   int _index = 0;
+  late final AppLifecycleListener _lifecycle;
+
+  @override
+  void initState() {
+    super.initState();
+    // Android deja la app viva en segundo plano: al volver otro día, Inicio
+    // y el Diario tienen que pasar a la fecha nueva.
+    _lifecycle = AppLifecycleListener(
+      onResume: () => ref.read(todayProvider.notifier).refresh(),
+    );
+  }
+
+  @override
+  void dispose() {
+    _lifecycle.dispose();
+    super.dispose();
+  }
 
   static const _screens = [
     HomeScreen(),

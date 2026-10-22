@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:intl/intl.dart';
 
 import '../../domain/glucose/glucose_context.dart';
 import '../../domain/glucose/glucose_providers.dart';
-import '../../domain/nutrition/meal.dart';
 import '../../domain/nutrition/nutrition_providers.dart';
 import '../common/medical_disclaimer_banner.dart';
 import '../../core/text/decimal_format.dart';
@@ -100,7 +100,9 @@ class _GlucoseEntryFormScreenState
   @override
   Widget build(BuildContext context) {
     final dayMeals = ref.watch(
-      mealsForSelectedDateProviderForDate(_measuredAt),
+      mealsForDateProvider(
+        DateTime(_measuredAt.year, _measuredAt.month, _measuredAt.day),
+      ),
     );
 
     return Scaffold(
@@ -116,7 +118,12 @@ class _GlucoseEntryFormScreenState
                 ListTile(
                   contentPadding: EdgeInsets.zero,
                   title: const Text('Fecha y hora'),
-                  subtitle: Text(_measuredAt.toString()),
+                  subtitle: Text(
+                    DateFormat(
+                      "d 'de' MMMM yyyy, HH:mm",
+                      'es',
+                    ).format(_measuredAt),
+                  ),
                   trailing: const Icon(Icons.edit),
                   onTap: _pickDateTime,
                 ),
@@ -233,11 +240,3 @@ class _GlucoseEntryFormScreenState
     );
   }
 }
-
-/// Comidas del mismo día que [date] (a diferencia de
-/// [mealsForSelectedDateProvider], que usa la fecha elegida en el Diario).
-final mealsForSelectedDateProviderForDate =
-    StreamProvider.family<List<Meal>, DateTime>((ref, date) {
-      final day = DateTime(date.year, date.month, date.day);
-      return ref.watch(mealRepositoryProvider).watchMealsForDate(day);
-    });

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:intl/intl.dart';
 
 import '../../core/text/portion_format.dart';
 import '../../domain/nutrition/meal_repository.dart';
@@ -19,10 +20,15 @@ class RecipeDetailScreen extends ConsumerWidget {
     WidgetRef ref,
     Recipe recipe,
   ) async {
+    // Se anota en el día abierto en el Diario; si no es hoy, se avisa.
+    final date = ref.read(selectedDiaryDateProvider);
+    final otherDay = date == ref.read(todayProvider)
+        ? null
+        : DateFormat("d 'de' MMMM", 'es').format(date);
     final choice = await showModalBottomSheet<(MealType, double)>(
       context: context,
       isScrollControlled: true,
-      builder: (context) => _RegisterSheet(recipe: recipe),
+      builder: (context) => _RegisterSheet(recipe: recipe, otherDay: otherDay),
     );
     if (choice == null || !context.mounted) {
       return;
@@ -32,7 +38,7 @@ class RecipeDetailScreen extends ConsumerWidget {
     await ref
         .read(mealRepositoryProvider)
         .addRecipe(
-          date: ref.read(selectedDiaryDateProvider),
+          date: date,
           type: mealType,
           recipeId: recipe.id,
           recipeName: recipe.name,
@@ -55,7 +61,7 @@ class RecipeDetailScreen extends ConsumerWidget {
         SnackBar(
           content: Text(
             '${recipe.name} (${formatPortions(portions)}) registrada en '
-            '${mealType.label}.',
+            '${mealType.label}${otherDay == null ? '' : ' del $otherDay'}.',
           ),
         ),
       );
@@ -234,9 +240,12 @@ class RecipeDetailScreen extends ConsumerWidget {
 
 /// Hoja para elegir cuántas porciones se comieron y en qué comida anotarlas.
 class _RegisterSheet extends StatefulWidget {
-  const _RegisterSheet({required this.recipe});
+  const _RegisterSheet({required this.recipe, this.otherDay});
 
   final Recipe recipe;
+
+  /// La fecha en que se anotará, solo si no es hoy (ej. "21 de octubre").
+  final String? otherDay;
 
   @override
   State<_RegisterSheet> createState() => _RegisterSheetState();
@@ -277,6 +286,15 @@ class _RegisterSheetState extends State<_RegisterSheet> {
                 ],
               ),
             ),
+            if (widget.otherDay != null)
+              ListTile(
+                dense: true,
+                leading: const Icon(Icons.event_outlined),
+                title: Text(
+                  'Se anotará en el Diario del ${widget.otherDay}, que es '
+                  'el día que tienes abierto.',
+                ),
+              ),
             const Divider(height: 1),
             for (final type in MealType.values)
               ListTile(

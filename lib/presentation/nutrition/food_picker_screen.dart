@@ -25,10 +25,17 @@ class _FoodPickerScreenState extends ConsumerState<FoodPickerScreen> {
     Future(() => ref.read(foodSearchQueryProvider.notifier).update(''));
   }
 
+  /// El alimento recién creado se devuelve de inmediato, como si se hubiera
+  /// elegido de la lista.
   Future<void> _createNewFood() async {
-    await Navigator.of(
+    final food = await Navigator.of(
       context,
-    ).push(MaterialPageRoute(builder: (_) => const FoodFormScreen()));
+    ).push<Food>(MaterialPageRoute(builder: (_) => const FoodFormScreen()));
+    if (food == null || !mounted) {
+      return;
+    }
+    ref.invalidate(foodSearchResultsProvider);
+    Navigator.of(context).pop(food);
   }
 
   Future<void> _scanBarcode() async {

@@ -82,6 +82,16 @@ class _BarcodeScanScreenState extends ConsumerState<BarcodeScanScreen> {
           'Puedes crear el alimento manualmente y editarlo después.',
         );
       }
+    } catch (_) {
+      // Una respuesta con un formato inesperado no puede dejar la pantalla
+      // trabada con el indicador de carga.
+      if (mounted) {
+        await _offerManualCreation(
+          barcode,
+          'No se pudieron leer los datos de este producto en Open Food '
+          'Facts. Puedes crear el alimento manualmente.',
+        );
+      }
     }
 
     if (mounted) {

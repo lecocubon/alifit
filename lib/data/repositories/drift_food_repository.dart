@@ -144,9 +144,14 @@ class DriftFoodRepository implements FoodRepository {
 
   @override
   Future<Food?> getByBarcode(String barcode) async {
-    final row = await (_db.select(
-      _db.foods,
-    )..where((t) => t.barcode.equals(barcode))).getSingleOrNull();
+    // Puede haber más de un alimento con el mismo código (ej. uno creado a
+    // mano y otro de Open Food Facts): se usa el más reciente.
+    final row =
+        await (_db.select(_db.foods)
+              ..where((t) => t.barcode.equals(barcode))
+              ..orderBy([(t) => OrderingTerm.desc(t.id)])
+              ..limit(1))
+            .getSingleOrNull();
     if (row == null) {
       return null;
     }

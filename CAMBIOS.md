@@ -3,6 +3,25 @@
 Cada sección se publica como notas de la versión y la app la muestra al
 avisar que hay una actualización.
 
+## 1.3.1
+
+- Inicio muestra siempre lo consumido hoy. Antes, si el Diario estaba en
+  otro día, "Hoy has consumido" mostraba ese día.
+- Si la app queda abierta de un día para otro, al volver Inicio y el Diario
+  pasan al día nuevo.
+- Cambio de hora: la racha de días registrando ya no se queda calculando
+  sin terminar (pasaba desde el cambio de hora de abril hasta junio), y las
+  flechas del Diario ya no se traban ni se saltan un día.
+- Al crear un alimento nuevo queda elegido de inmediato; ya no hay que
+  volver a buscarlo.
+- Al registrar una receta desde Recetas se avisa si va a quedar en un día
+  que no es hoy.
+- Recetas: al quitar un ingrediente, los de abajo ya no muestran
+  cantidades que no son suyas.
+- El escáner de códigos de barras ya no se queda pegado con algunos
+  productos de Open Food Facts.
+- Glicemias: la fecha del registro se ve legible.
+
 ## 1.3.0
 
 - Las recetas se registran en el Diario como un solo ítem (ej. "Waffle

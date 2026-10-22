@@ -56,13 +56,17 @@ class HttpOffClient implements OffClient {
     final nutriments = product['nutriments'] as Map<String, dynamic>? ?? {};
     final missing = <String>[];
 
+    // Algunos productos traen los valores como texto ("12.5") o vacíos.
     double? readNutrient(String key, String label) {
-      final value = nutriments[key];
+      final value = switch (nutriments[key]) {
+        final num number => number.toDouble(),
+        final String text => double.tryParse(text.replaceAll(',', '.')),
+        _ => null,
+      };
       if (value == null) {
         missing.add(label);
-        return null;
       }
-      return (value as num).toDouble();
+      return value;
     }
 
     // Open Food Facts entrega los nutrientes normalizados "por 100g/100ml"
@@ -88,7 +92,7 @@ class HttpOffClient implements OffClient {
 
     final warning = _validate(calories, carbs, protein, fat);
 
-    final rawName = (product['product_name'] as String?)?.trim();
+    final rawName = _textOf(product['product_name'])?.trim();
     final hasName = rawName != null && rawName.isNotEmpty;
     if (!hasName) {
       missing.add('nombre');
@@ -97,14 +101,16 @@ class HttpOffClient implements OffClient {
     return OffProduct(
       barcode: barcode,
       name: hasName ? rawName : 'Producto sin nombre',
-      brand: _firstOf(product['brands'] as String?),
-      country: _firstOf(product['countries'] as String?),
+      brand: _firstOf(_textOf(product['brands'])),
+      country: _firstOf(_textOf(product['countries'])),
       nutritionPer100: nutrition,
       fetchedAt: DateTime.now(),
       missingFields: missing,
       inconsistencyWarning: warning,
     );
   }
+
+  String? _textOf(Object? value) => value is String ? value : null;
 
   String? _firstOf(String? commaSeparated) {
     if (commaSeparated == null || commaSeparated.trim().isEmpty) {
